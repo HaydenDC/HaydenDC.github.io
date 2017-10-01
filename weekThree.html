@@ -25,7 +25,7 @@ var c = document.getElementById("canOne");
 var ctx = c.getContext("2d");
 var grade = ctx.createRadialGradient(75,50,5,90,60,100);
 grade.addColorStop(0, "red");
-grade.addColorStop(0,"white");
+grade.addColorStop(1,"white");
 
 ctx.fillStyle = grade;
 ctx.fillRect(10,10,150,80);
