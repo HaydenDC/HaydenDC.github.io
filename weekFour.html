@@ -48,7 +48,9 @@ executed multiple times.</p><br/>
    		text+= exampleArray[i] + ",";
    	}
    	//Display
-   	document.getElementById("resultsTwo").innerHTML = text;
+   	var theResult = document.getElementById("resultsTwo").innerHTML = text;
+
+   	return theResult;
    }
 document.getElementById("resultsTwo").innerHTML = exampleFun();
 </script>
