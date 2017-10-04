@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+<h3>Variables</h3>
 <p>Declaring a variable is easy. Simply start<br/>
 with 'var' then name the variable. Then assign the<br/>
 variable a value such as '3'. Only when the <br/>
@@ -15,7 +16,7 @@ var numVar = 3;<br/>
 <p id="varOne"></p>
 <br/>
 <p id="varTwo"></p>
-
+<!--Variables-->
 <script>
    var strVar = "This is a string variable.";
    document.getElementById("varOne").innerHTML = strVar;
@@ -25,6 +26,32 @@ var numVar = 3;<br/>
  	document.getElementById("varTwo").innerHTML = numVar;
 </script>
 
+<!--Function, Array, Loop-->
+<h3>Functions, Array's, Loops</h3><br/>
+<p>An array is a collection of variables that <br/>
+can be accessed. A function is a segment of <br/>
+code that is set aside to perform a certain <br/>
+task. A loop is a block of code that can be <br/>
+executed multiple times.</p><br/>
+
+<p id="arrayOne"></p>
+<p id="functionOne"></p>
+<p id="loopOne"></p>
+<p id= "resultsTwo"></p>
+
+<script>
+   function exampleFun(){
+   	var exampleArray = "Dog", "Cat", "Fish";
+   	var list = "";
+   	//loop
+   	for(var i = 0; i<exampleArray.length; i++){
+   		text+= exampleArray[i] + ",";
+   	}
+   	//Display
+   	document.getElementById("resultsTwo").innerHTML = text;
+   }
+   
+</script>
 </body>
 
 </html>
