@@ -41,16 +41,13 @@ executed multiple times.</p><br/>
 
 <script>
    function exampleFun(){
-   	var exampleArray = ["Dog", "Cat", "Fish"];
-   	var list = "";
+   	var exampleArray = [1, 2, 3];
+   	var answer = 0;
    	//loop
-   	for(var i = 0; i<exampleArray.length; i++){
-   		list+= exampleArray[i] + ",";
+   	for (var i = 0; i<exampleArray.length; i++){
+   		answer += exampleArray[i];
    	}
-   	//Display
-   	//var theResult = document.getElementById("resultsTwo").innerHTML = text;
-
-   	return list;
+   	return answer;
    }
 document.getElementById("resultsTwo").innerHTML = exampleFun();
 </script>
