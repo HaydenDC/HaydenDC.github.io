@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>This is using a <'h2'> tag</h1>
+<h1 id="variable"></h1>
+<script>
+ var strVar = "This is a string var";
+ var numVar = 3;
+ var strTwo = "The 3 is a number var";
+
+ document.getElemntById("variable")inner.HTML = strVar;
+ document.getElemntById("variable")inner.HTML = numVar;
+ document.getElemntById("variable")inner.HTML = strTwo;
+</script>
+
+</body>
+
+</html>
