@@ -52,7 +52,7 @@
 
    <b style="color:blue">}</b>
    //Display
-document.getElementById("resultsTwo").innerHTML = <b>exampleFun(<span style="color:green"> 4</span>)</b>;
+document.getElementById("resultsTwo").innerHTML = <b>exampleFun(<span style="color:green">4</span>)</b>;
 
 <b>Result:</b><br>
 </pre>
@@ -76,6 +76,23 @@ document.getElementById("resultsTwo").innerHTML = <b>exampleFun(<span style="col
    }
 document.getElementById("resultsTwo").innerHTML = exampleFun(4);
 </script>
+
+
+<h3> Associative array</h3>
+<pre>    This is very similar to a hash
+ table or map. Each value in the array is
+ associated with a key value. When the key
+ is referenced, the value is returned.
+ </pre>
+
+<p id="assocArr"></p>
+<script>
+
+var associatedArray = [key1: 'Dog', key2: 'Cat', key3: 'Fish'];
+document.getElementById('assocArr').innerHTML = associatedArray[key2];
+
+</script>
+
 </body>
 
 </html>
