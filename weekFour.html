@@ -34,9 +34,23 @@ code that is set aside to perform a certain <br/>
 task. A loop is a block of code that can be <br/>
 executed multiple times.</p><br/>
 
-<p id="arrayOne"></p>
-<p id="functionOne"></p>
-<p id="loopOne"></p>
+<b>Example:</b><br/>
+  <b>function</b> exampleFun(<b>a</b>)<b>{<b><br/>
+   	var exampleArray = <b>[1, 2, 3]</b>;
+   	var answer = 0;
+   	//loop
+   	<b>for</b> (var i = 0; i < exampleArray.length; i++)<b>{
+   		answer += exampleArray[i];
+   	}</b>
+
+   	<b>return answer + a;<b>
+   }<br/>
+
+document.getElementById("resultsTwo").innerHTML = <b>exampleFun(4)</b>;
+
+<b>Result:</b><br/>
+
+
 <p id= "resultsTwo"></p>
 
 <script>
