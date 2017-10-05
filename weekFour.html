@@ -27,12 +27,12 @@ var numVar = 3;<br/>
 </script>
 
 <!--Function, Array, Loop, parameters-->
-<h3>Functions, Array's, Loops</h3><br/>
+<h3>Functions, Array's, Loops</h3>
 <p>An array is a collection of variables that <br/>
 can be accessed. A function is a segment of <br/>
 code that is set aside to perform a certain <br/>
 task. A loop is a block of code that can be <br/>
-executed multiple times.<br/>
+executed multiple times.<br>
 
 <b>Example:</b><br/>
   <b>function</b> exampleFun(<b>a</b>)<b>{</b><br>
@@ -43,7 +43,12 @@ executed multiple times.<br/>
    		answer += exampleArray[i];<br>
    	}</b><br><br>
 
-   	<b>return answer + a;</b><br>
+   	<b>if(a > 0)</b>{<br>
+   	return answer + a;<br>
+   }<br>
+   <b>else</b><br>
+   	return answer - a;<br><br>
+
    }<br><br>
 
 document.getElementById("resultsTwo").innerHTML = <b>exampleFun(4)</b>;<br>
@@ -61,7 +66,12 @@ document.getElementById("resultsTwo").innerHTML = <b>exampleFun(4)</b>;<br>
    	for (var i = 0; i < exampleArray.length; i++){
    		answer += exampleArray[i];
    	}
+
+   	if(a > 0){
    	return answer + a;
+   }
+   else
+   	return answer - a;
    }
 document.getElementById("resultsTwo").innerHTML = exampleFun(4);
 </script>
