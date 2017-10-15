@@ -114,19 +114,20 @@ document.getElementById('assocArr').innerHTML = associatedArray['key2'];
    Here is the JSON object that we can stringify:
    {"name":"Hayden Carlson", "Age":"26","Gender":"Male","Availability":"Nope. Married"};
 
-   Click the button to stringify and then display the JSON string.
+   Click the button to parse the object and then display it.
 </pre>
 
-<p id="strng"></p>
+<p id="strng" style="color:red"></p>
 <script>
 	var object = {"name":"Hayden Carlson", "Age":"26","Gender":"Male","Availability":"Nope. Married"};
 	function stringIt(){
 	var myString = JSON.stringify(object);
-    document.getElementById("strng").innerHTML = myString;
+	var myParse = JSON.parse({"name":"Hayden Carlson", "Age":"26","Gender":"Male","Availability":"Nope. Married"};)
+    document.getElementById("strng").innerHTML = myParse;
 }
 </script>
-<button id="strngfy" onclick="stringIt()" style="width:50px; height:40px">
-Stringify!
+<button id="strngfy" onclick="stringIt()" style="width:75px; height:40px">
+Parse!
 </button>
 
 </body>
