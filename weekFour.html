@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body style="font-family: verdana">
+<!--Section that I taught-->
+<h2>JavaScript Section</h2>
 <h3>Variables</h3>
 <pre>
     Declaring a variable is easy. Simply start with 'var' then name the variable. Then 
@@ -73,6 +75,7 @@ document.getElementById("resultsTwo").innerHTML = <b>exampleFun(<span style="col
    else
    	return answer - a;
    }
+   
 document.getElementById("resultsTwo").innerHTML = exampleFun(4);
 </script>
 
@@ -103,6 +106,28 @@ document.getElementById('assocArr').innerHTML = associatedArray['key2'];
  Associated Arrays:
   <a href="http://www.i-programmer.info/programming/javascript/1441-javascript-data-structures-the-associative-array.html">I-PROGRAMMER</a>
 </pre><br><br><br>
+
+<!--Section that RICHARD taught-->
+<h2>JSON.stringify(), JSON.parse()</h2>
+
+<pre>
+   Here is the JSON object that we can stringify:
+   {"name":"Hayden Carlson", "Age":"26","Gender":"Male","Availability":"Nope. Married"};
+
+   Click the button to stringify and then display the JSON string.
+</pre>
+
+<p id="strng"></p>
+<script>
+	var object = {"name":"Hayden Carlson", "Age":"26","Gender":"Male","Availability":"Nope. Married"};
+	function stringIt{
+	var myString = JSON.stringify(object);
+    document.getElementById("strng").innerHTML = myString;
+}
+</script>
+<button id="strngfy" onclick="stringIt">
+</button>
+
 </body>
 
 </html>
