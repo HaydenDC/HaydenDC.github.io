@@ -11,12 +11,11 @@
   	function makeRed(){
   		document.getElementById("manipulated").style.color="red";
   	}
-	function underline(){
-  		document.getElementById("manipulated").style.text-decoration="underline";
+	function cDirection(){
+  		document.getElementById("manipulated").style.direction="ltr";
+  		document.getElementById("bW").style.direction="ltr";
   	}
-  	function letterSpacing(){
-  		document.getElementById("manipulated").style.letter-spacing="5px";
-  	}
+  	
   </script>
 
 <!--makeRed()-->
@@ -25,14 +24,10 @@
   </button>
 
   <!--underline()-->
-  <button onclick="underline()">
-  	Underline
+  <button id="bW" onclick="cDirection()">
+  	Backwords
   </button>
   
-  <!--letterSpacing()-->
-  <button onclick="letterSpacing()">
-  	Letter Spacing
-  </button>
 
 </body>
 
