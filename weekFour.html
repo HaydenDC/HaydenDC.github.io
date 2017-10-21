@@ -123,11 +123,11 @@ document.getElementById('assocArr').innerHTML = associatedArray['key2'];
 	function stringIt(){
 	var myString = JSON.stringify(object);
 	var myParse = JSON.parse('{"name":"Hayden Carlson", "Age":"26","Gender":"Male","Availability":"Nope. Married"}');
-    document.getElementById("strng").innerHTML = object["name"];
+    document.getElementById("strng").innerHTML = object[myParse];
 }
 </script>
 <button id="strngfy" onclick="stringIt()" style="width:75px; height:40px">
-Parse!
+Parse!!
 </button>
 
 </body>
