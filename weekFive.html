@@ -10,6 +10,7 @@
 
 </style>
 <body style="font-family: verdana">
+	<a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
 <!--Manipulating CSS-->
   <h2>Manipulating CSS</h2>
   
@@ -62,8 +63,7 @@ function slideBox(){
 	var id = setInterval(moveFrame, 1);
 	function moveFrame(){
 		if (pos == 650){
-			pos --;
-			boxToMove.style.left = pos + 'px';
+			
 			clearInterval(id);
 		}
 		else{
