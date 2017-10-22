@@ -7,7 +7,8 @@ div{
   background:red;
   
   -webkit-transition: width 3s, height 2s, background 3s; /*For those safari users*/
-  transition: width 3s, height 2s, background 3s;
+  transition: width 3s, height 2s, background 3s, transform: 5s;
+
 }
 
 .second{
@@ -23,10 +24,6 @@ div{
   transform-origin: left bottom;
   transition: transform 60s;
 
- &:hover{
-  transform:rotate(360deg);
-};
-
 }
 
 div:hover{
@@ -34,7 +31,9 @@ div:hover{
   height: 200px;
   background: blue;
   color:white;
+  transform: rotate(360deg);
 }
+
 </style>
 <body style="font-family: verdana">
   <a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
