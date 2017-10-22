@@ -62,7 +62,8 @@ function slideBox(){
 	var id = setInterval(moveFrame, 1);
 	function moveFrame(){
 		if (pos == 650){
-			pos = pos - 200;
+			pos --;
+			boxToMove.style.left = pos + 'px';
 			clearInterval(id);
 		}
 		else{
