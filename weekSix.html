@@ -5,26 +5,13 @@ div{
   width:60px;
   height:60px;
   background:red;
-  
+  position:relative;
+  left: 100px;
   -webkit-transition: width 3s, height 2s, background 3s; /*For those safari users*/
   transition: width 3s, height 2s, background 3s, transform 5s;
 
 }
 
-.second{
-  width:15px;
-  height:50px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
-  background: black;
-  position:absolute;
-  left: 100px;
-  transform-origin: left bottom;
-  transition: transform 60s;
-
-}
 
 div:hover{
   width: 200px;
@@ -37,17 +24,14 @@ div:hover{
 </style>
 <body style="font-family: verdana">
   <a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
-  <h2>Transition</h2>
+  <h2>Transition and Transformation</h2>
+  <pre>The box growing uses the transition feature.
+  The box rotating uses the transform feature.</pre>
 <div>
 A Box
 </div>
 <br><br>
-<h2>Transformation</h2>
-<pre>This is transforming 'onload'</pre>
-<br><br><br>
-<div class="second">
 
-</div>
 
 </body>
 
