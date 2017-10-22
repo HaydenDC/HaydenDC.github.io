@@ -8,8 +8,16 @@
 
   <!--Manipulating JavaScript-->
   <script>
+  	//Manipulate Buttons
+  	function cBackground(){
+  		document.getElementById("makeR").style.border="2px solid green";
+  		document.getElementById("move").style.border="2px solid green";
+  	}
+
+  	//Button Funcitons
   	function makeRed(){
   		document.getElementById("manipulated").style.color="red";
+  		cBackground();
   	}
 	function cDirection(){
 		if(document.getElementById("manipulated").style.direction == "ltr"){
@@ -22,15 +30,15 @@
   	}
   	
   </script>
-  	}
+  	
 
 <!--makeRed()-->
-  <button onclick="makeRed()">
+  <button id="makeR" onclick="makeRed()">
   	Make Red
   </button>
 
   <!--underline()-->
-  <button id="bW" onclick="cDirection()">
+  <button id="move" onclick="cDirection()">
   	Move
   </button>
   
