@@ -55,12 +55,14 @@
   <h2>JavaScript Events</h2>
 
 <script>
+	
 function slideBox(){
 	var boxToMove = document.getElementById("movingBox");
 	var pos = 0;
 	var id = setInterval(moveFrame, 1);
 	function moveFrame(){
 		if (pos == 650){
+			pos = pos - 200;
 			clearInterval(id);
 		}
 		else{
@@ -69,9 +71,14 @@ function slideBox(){
 		}
 	}
 }
+
+function youClickedMe(){
+	document.getElementById("movingBox").style.color = "red";
+
+}
 </script>
   
-<div id="movingBox" onmouseover="slideBox()">
+<div id="movingBox" onmouseover="slideBox()" onclick="youClickedMe()">
 	Click Me
 </div>
 
