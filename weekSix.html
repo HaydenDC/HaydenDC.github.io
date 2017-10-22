@@ -20,6 +20,12 @@ div{
   background: black;
   position:absolute;
   left: 100px;
+  transform-origin: center bottom;
+  transition: transform 60s;
+
+  &:onload{
+    transform: rotate(360deg);
+  }
 
 }
 
@@ -40,7 +46,7 @@ A Box
 <h2>Transformation</h2>
 <pre>This is transforming 'onload'</pre>
 <br><br><br>
-<div id="second" onload="transform-origin: center bottom; transform: rotate(360deg);">
+<div id="second">
 
 </div>
 
