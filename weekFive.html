@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+<style>
+  #movingBox{
+  width: 100px;
+  height: 35px;
+  position: absolute;
+  background-color: lightblue;
+}
+
+</style>
 <body style="font-family: verdana">
 <!--Manipulating CSS-->
   <h2>Manipulating CSS</h2>
@@ -44,7 +53,27 @@
   </button><br><br>
 
   <h2>JavaScript Events</h2>
+
+<script>
+funciton slideBox(){
+	var boxToMove = document.getElementById("movingBox");
+	var pos = 0;
+	var id = setInterval(moveFrame, 5);
+	funciton moveFrame(){
+		if (pos == 350){
+			clearInterval(id);
+		}
+		else{
+			pos++;
+			boxToMove.style.left = pos + 'px';
+		}
+	}
+}
+</script>
   
+<div id="movingBox" onmouseover="slideBox()">
+</div>
+
   
 
 </body>
