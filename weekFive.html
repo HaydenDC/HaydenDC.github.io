@@ -58,9 +58,9 @@
 function slideBox(){
 	var boxToMove = document.getElementById("movingBox");
 	var pos = 0;
-	var id = setInterval(moveFrame, 5);
+	var id = setInterval(moveFrame, 1);
 	function moveFrame(){
-		if (pos == 350){
+		if (pos == 650){
 			clearInterval(id);
 		}
 		else{
@@ -72,6 +72,7 @@ function slideBox(){
 </script>
   
 <div id="movingBox" onmouseover="slideBox()">
+	Click Me
 </div>
 
   
