@@ -154,13 +154,13 @@ EXAMPLE:
 		//Member Method
     	this.displayGPATwo = function (){
     		document.getElementById("constrOneA").innerHTML =
-    		this.gPA + "<br>";
+    		"GPA: " + this.gPA + "<br>";
 
 		}
 
 		this.displayGPAThree = function (){
     		document.getElementById("constrTwoA").innerHTML =
-    		this.gPA + "<br>";
+    		"GPA: " + this.gPA + "<br>";
 
 		}
 	}
@@ -174,7 +174,7 @@ EXAMPLE:
       studentTwo.lastName  + "<br>" +
     "Gender: "  + studentTwo.gender  + "<br>" +
     "Year: "  + studentTwo.year  + "<br>" +
-    "Major: "  + studentTwo.major  + "<br>";
+    "Major: "  + studentTwo.major ;
     studentTwo.displayGPATwo();
 
     //Display object properties studentTwo
@@ -183,7 +183,7 @@ EXAMPLE:
       studentThree.lastName  + "<br>" +
     "Gender: "  + studentThree.gender  + "<br>" +
     "Year: "  + studentThree.year  + "<br>" +
-    "Major: "  + studentThree.major  + "<br>";
+    "Major: "  + studentThree.major ;
     studentThree.displayGPAThree();
 
  
