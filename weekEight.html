@@ -3,4 +3,28 @@
 <body>
 <h1>JavaScript-Object Creation Functions, Inheritance, Properties, Methods, Insantiation</h1>
 
+<h2>Object literal</h2>
+
+<p id="lit"></p>
+<script>
+	//Create object literal
+	var student = 
+	{
+		firstName: "Hayden", 
+		lastName: "Carlson", 
+		gender: "Male",
+		year: "Senior",
+		major: "Software Engineering"
+};
+
+    //Display object properties
+    document.getElementById("lit").innerHTML = 
+    student.firstName + ", " +
+    student.lastName + "<br>" +
+    "Gender: " + student.gender + "<br>" +
+    "Year: " + student.year + "<br>" +
+    "Major: " + student.major + "<br>";
+
+
+</script>
 </html>
