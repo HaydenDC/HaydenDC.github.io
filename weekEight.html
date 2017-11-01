@@ -140,6 +140,7 @@ EXAMPLE:
 <p id="constrOne"></p>
 <p id="constrOneA"></p>
 <p id="constrTwo"></p>
+<p id="constrTwoA"></p>
 <script>
 	function newStudent(fName, lName, gen, yr, mjr, gpa)
 	{
@@ -151,8 +152,14 @@ EXAMPLE:
 		this.gPA = gpa
 
 		//Member Method
-    	this.displayGPA = function (){
+    	this.displayGPATwo = function (){
     		document.getElementById("constrOneA").innerHTML =
+    		this.gPA + "<br>";
+
+		}
+
+		this.displayGPAThree = function (){
+    		document.getElementById("constrTwoA").innerHTML =
     		this.gPA + "<br>";
 
 		}
@@ -168,7 +175,7 @@ EXAMPLE:
     "Gender: "  + studentTwo.gender  + "<br>" +
     "Year: "  + studentTwo.year  + "<br>" +
     "Major: "  + studentTwo.major  + "<br>";
-    studentTwo.displayGPA();
+    studentTwo.displayGPATwo();
 
     //Display object properties studentTwo
     document.getElementById("constrOne").innerHTML = 
@@ -177,7 +184,7 @@ EXAMPLE:
     "Gender: "  + studentThree.gender  + "<br>" +
     "Year: "  + studentThree.year  + "<br>" +
     "Major: "  + studentThree.major  + "<br>";
-    studentThree.displayGPA();
+    studentThree.displayGPAThree();
 
  
 </script>
