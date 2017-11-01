@@ -22,11 +22,11 @@ var student =
 
 //Display object properties
     document.getElementById("lit").innerHTML = 
-    "Name: " + student.firstName + " " +
-    student.lastName + "<br>" +
-    "Gender: " + student.gender + "<br>" +
-    "Year: " + student.year + "<br>" +
-    "Major: " + student.major + "<br>";
+    "Name: " + <span style="color:red;">student.firstName</span> + " " +
+    <span style="color:red;">student.lastName</span> + "<br>" +
+    "Gender: " + <span style="color:red;">student.gender</span> + "<br>" +
+    "Year: " + <span style="color:red;">student.year</span> + "<br>" +
+    "Major: " + <span style="color:red;">student.major</span> + "<br>";
 <b>The result:<b>
 </pre>
 
@@ -44,11 +44,11 @@ var student =
 
     //Display object properties
     document.getElementById("lit").innerHTML = 
-    "Name: " + "<span style="color:red;">" + student.firstName+ "</span>" + " " +
-    "<span style="color:red;">" + student.lastName + "</span>" + "<br>" +
-    "Gender: " + "<span style="color:red;">" + student.gender + "</span>" + "<br>" +
-    "Year: " + "<span style="color:red;">" + student.year + "</span>" + "<br>" +
-    "Major: " + "<span style="color:red;">" + student.major + "</span>" + "<br>";
+    "Name: " + student.firstName + " " +
+     student.lastName  + "<br>" +
+    "Gender: "  + student.gender  + "<br>" +
+    "Year: "  + student.year  + "<br>" +
+    "Major: "  + student.major  + "<br>";
 
 
 </script>
@@ -67,11 +67,11 @@ var student =
 
 	//Display object properties
     document.getElementById("newObj").innerHTML = 
-    "Name: " + "<span style="color:red;">" + studentOne.firstName+ "</span>" + " " +
-    "<span style="color:red;">" + studentOne.lastName + "</span>" + "<br>" +
-    "Gender: " + "<span style="color:red;">" + studentOne.gender + "</span>" + "<br>" +
-    "Year: " + "<span style="color:red;">" + studentOne.year + "</span>" + "<br>" +
-    "Major: " + "<span style="color:red;">" + studentOne.major + "</span>" + "<br>";
+    "Name: "  + studentOne.firstName + " " 
+     + studentOne.lastName  + "<br>" +
+    "Gender: "  + studentOne.gender  + "<br>" +
+    "Year: "  + studentOne.year  "<br>" +
+    "Major: "  + studentOne.major  + "<br>";
 </script>
 
 </html>
