@@ -150,11 +150,11 @@ EXAMPLE:
 		//Display object properties studentThree
     	this.displayStudentThree = function (fiName, laName, genD, yeaR, maJ){
     	document.getElementById("constrTwo").innerHTML = 
-    	"Name: "  + studentThree.fiName + " " +
-     	 studentThree.laName  + "<br>" +
-    	"Gender: "  + studentThree.genD  + "<br>" +
-    	"Year: "  + studentThree.yeaR  + "<br>" +
-    	"Major: "  + studentThree.maJ  + "<br>";
+    	"Name: "  + this.fiName + " " +
+     	 this.laName  + "<br>" +
+    	"Gender: "  + this.genD  + "<br>" +
+    	"Year: "  + this.yeaR  + "<br>" +
+    	"Major: "  + this.maJ  + "<br>";
 		}
 	}
 
@@ -170,7 +170,7 @@ EXAMPLE:
     "Major: "  + studentTwo.major  + "<br>";
 
     //Call function to display studentThree
-
+    studentThree.displayStudentThree("Jacob", "Bassett", "Male", "Sophomore", "Web Design");
 </script>
 
 </html>
