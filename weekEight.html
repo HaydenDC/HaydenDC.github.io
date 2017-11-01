@@ -11,6 +11,7 @@ literal. This is very similar to an associative array.
 Just like with objects in other languages, we can use 
 the "." operator to call member properties of the object.
 
+EXAMPLE:
 var student = 
 {
 	firstName: "Hayden", 
@@ -23,7 +24,7 @@ var student =
 //Display object properties
     document.getElementById("lit").innerHTML = 
     "Name: " + <span style="color:red;">student.firstName</span> +
-     " " + 
+    " " + 
     <span style="color:red;">student.lastName</span> + 
     "Gender: " + <span style="color:red;">student.gender</span> +
     "Year: " + <span style="color:red;">student.year</span>  +
@@ -61,6 +62,7 @@ var student =
 the object. This lets you use the "." operator
 to declare the member properties.
 
+EXAMPLE: 
 var studentOne = new Object();
 <span style="color:red;">studentOne.firstName</span> = "Nathan";
 <span style="color:red;">studentOne.lastName</span> = "Bassett";
@@ -70,7 +72,7 @@ var studentOne = new Object();
 //Display object properties
     document.getElementById("lit").innerHTML = 
     "Name: " + <span style="color:red;">studentOne.firstName</span> +
-     " " + 
+    " " + 
     <span style="color:red;">studentOne.lastName</span> + 
     "Gender: " + <span style="color:red;">studentOne.gender</span> +
     "Year: " + <span style="color:red;">studentOne.year</span>  +
@@ -100,6 +102,40 @@ var studentOne = new Object();
 <!--Object with a constructor-->
 <h2>Using a Constructor (ideal method)</h2>
 <pre>
+	Using a constructor is a more effective way to create
+objects. This is similar to creating a class and then 
+instansiating an object. You will be able to make multiple
+objects this way.
+
+EXAMPLE:
+	function newStudent(fName, lName, gen, yr, mjr)
+	{
+		<span style="color:purple;">this.firstName</span> = fName;
+		<span style="color:purple;">this.lastName</span> = lName;
+		<span style="color:purple;">this.gender</span> = gen;
+		<span style="color:purple;">this.year</span> = yr;
+		<span style="color:purple;">this.major</span> = mjr;
+	}
+
+	var studentTwo = new newStudent("Sean", "Carlson", "Male", "Sophomore", "Biology");
+	var studentThree = new newStudent("Jacob", "Bassett", "Male", "Sophomore", "Web Design");
+
+	//Display object properties studentTwo
+    document.getElementById("constrOne").innerHTML = 
+    "Name: "  + studentTwo.firstName +
+    " " +
+    studentTwo.lastName  + 
+    "Gender: "  + studentTwo.gender  + 
+    "Year: "  + studentTwo.year  + 
+    "Major: "  + studentTwo.major;
+
+    //Display object properties studentThree
+    document.getElementById("constrTwo").innerHTML = 
+    "Name: "  + studentThree.firstName + " " +
+      studentThree.lastName  + "<br>" +
+    "Gender: "  + studentThree.gender  + "<br>" +
+    "Year: "  + studentThree.year  + "<br>" +
+    "Major: "  + studentThree.major  + "<br>";
 </pre>
 <p id="constrOne"></p>
 <p id="constrTwo"></p>
@@ -127,7 +163,7 @@ var studentOne = new Object();
     //Display object properties studentThree
     document.getElementById("constrTwo").innerHTML = 
     "Name: "  + studentThree.firstName + " " +
-      studentTwo.lastName  + "<br>" +
+      studentThree.lastName  + "<br>" +
     "Gender: "  + studentThree.gender  + "<br>" +
     "Year: "  + studentThree.year  + "<br>" +
     "Major: "  + studentThree.major  + "<br>";
