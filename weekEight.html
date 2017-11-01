@@ -138,28 +138,28 @@ EXAMPLE:
     "Major: "  + studentThree.major  + "<br>";
 </pre>
 <p id="constrOne"></p>
+<p id="constrOneA"></p>
 <p id="constrTwo"></p>
 <script>
-	function newStudent(fName, lName, gen, yr, mjr)
+	function newStudent(fName, lName, gen, yr, mjr, gpa)
 	{
 		this.firstName = fName;
 		this.lastName = lName;
 		this.gender = gen;
 		this.year = yr;
 		this.major = mjr;
-		//Display object properties studentThree
-    	this.displayStudentThree = function (fiName, laName, genD, yeaR, maJ){
-    	document.getElementById("constrTwo").innerHTML = 
-    	"Name: "  + studentThree.fiName + " " +
-     	 studentThree.laName  + "<br>" +
-    	"Gender: "  + this.genD  + "<br>" +
-    	"Year: "  + this.yeaR  + "<br>" +
-    	"Major: "  + this.maJ  + "<br>";
+		this.gPA = gpa
+
+		//Member Method
+    	this.displayGPA = function (gpa){
+    		document.getElementById("constrOneA").innerHTML =
+    		this.gpa + "<br>";
+
 		}
 	}
 
-	var studentTwo = new newStudent("Sean", "Carlson", "Male", "Sophomore", "Biology");
-	var studentThree = new newStudent("Jacob", "Bassett", "Male", "Sophomore", "Web Design");
+	var studentTwo = new newStudent("Sean", "Carlson", "Male", "Sophomore", "Biology", 3.5);
+	var studentThree = new newStudent("Jacob", "Bassett", "Male", "Sophomore", "Web Design", 3.7);
 
 	//Display object properties studentTwo
     document.getElementById("constrOne").innerHTML = 
@@ -168,9 +168,18 @@ EXAMPLE:
     "Gender: "  + studentTwo.gender  + "<br>" +
     "Year: "  + studentTwo.year  + "<br>" +
     "Major: "  + studentTwo.major  + "<br>";
+    studentTwo.displayGPA(studentTwo.gPA);
 
-    //Call function to display studentThree
-    studentThree.displayStudentThree("Jacob", "Bassett", "Male", "Sophomore", "Web Design");
+    //Display object properties studentTwo
+    document.getElementById("constrOne").innerHTML = 
+    "Name: "  + studentThree.firstName + " " +
+      studentThree.lastName  + "<br>" +
+    "Gender: "  + studentThree.gender  + "<br>" +
+    "Year: "  + studentThree.year  + "<br>" +
+    "Major: "  + studentThree.major  + "<br>";
+    studentThree.displayGPA(studentTwo.gPA);
+
+ 
 </script>
 
 </html>
