@@ -22,12 +22,13 @@ var student =
 
 //Display object properties
     document.getElementById("lit").innerHTML = 
-    "Name: " + <span style="color:red;">student.firstName</span> + " " +
-    <span style="color:red;">student.lastName</span> + "<br>" +
-    "Gender: " + <span style="color:red;">student.gender</span> + "<br>" +
-    "Year: " + <span style="color:red;">student.year</span> + "<br>" +
-    "Major: " + <span style="color:red;">student.major</span> + "<br>";
-<b>The result:<b>
+    "Name: " + <span style="color:red;">student.firstName</span> +
+     " " + 
+    <span style="color:red;">student.lastName</span> + 
+    "Gender: " + <span style="color:red;">student.gender</span> +
+    "Year: " + <span style="color:red;">student.year</span>  +
+    "Major: " + <span style="color:red;">student.major</span>;
+<b>The Result:<b>
 </pre>
 
 <p id="lit"></p>
@@ -54,7 +55,28 @@ var student =
 </script>
 
 <!--Object using "new"-->
+<h2>Object using "new"</h2>
 <pre>
+	You can use the "new" keyword to create
+the object. This lets you use the "." operator
+to declare the member properties.
+
+var studentOne = new Object();
+studentOne.firstName = "Nathan";
+studentOne.lastName = "Bassett";
+studentOne.gender = "Male";
+studentOne.year = "Sophomore";
+
+//Display object properties
+    document.getElementById("lit").innerHTML = 
+    "Name: " + <span style="color:red;">student.firstName</span> +
+     " " + 
+    <span style="color:red;">student.lastName</span> + 
+    "Gender: " + <span style="color:red;">student.gender</span> +
+    "Year: " + <span style="color:red;">student.year</span>  +
+    "Major: " + <span style="color:red;">student.major</span>;
+
+ <b>The Result</b>
 </pre>
 
 <p id="newObj"></p>
@@ -73,5 +95,7 @@ var student =
     "Year: "  + studentOne.year  + "<br>" +
     "Major: "  + studentOne.major  + "<br>";
 </script>
+
+
 
 </html>
