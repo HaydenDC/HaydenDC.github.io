@@ -3,6 +3,7 @@
 <body style="font-family: verdana">
 <h1>JavaScript-Object Creation Functions, Inheritance, Properties, Methods, Insantiation</h1>
 
+<!--Object Literal-->
 <h2>Object literal</h2>
 <pre>
    Creating an object in Javascript can be done as a 
@@ -19,6 +20,13 @@ var student =
 	major: "Software Engineering"
 };	
 
+//Display object properties
+    document.getElementById("lit").innerHTML = 
+    "Name: " + student.firstName + " " +
+    student.lastName + "<br>" +
+    "Gender: " + student.gender + "<br>" +
+    "Year: " + student.year + "<br>" +
+    "Major: " + student.major + "<br>";
 <b>The result:<b>
 </pre>
 
@@ -36,12 +44,34 @@ var student =
 
     //Display object properties
     document.getElementById("lit").innerHTML = 
-    "Name: " + student.firstName + " " +
-    student.lastName + "<br>" +
-    "Gender: " + student.gender + "<br>" +
-    "Year: " + student.year + "<br>" +
-    "Major: " + student.major + "<br>";
+    "Name: " + "<span style="color:red;">" + student.firstName+ "</span>" + " " +
+    "<span style="color:red;">" + student.lastName "</span>" + "<br>" +
+    "Gender: " + "<span style="color:red;">" + student.gender + "</span>" + "<br>" +
+    "Year: " + "<span style="color:red;">" + student.year + "</span>" + "<br>" +
+    "Major: " + "<span style="color:red;">" + student.major + "</span>" + "<br>";
 
 
 </script>
+
+<!--Object using "new"-->
+<pre>
+</pre>
+
+<p id="newObj"></p>
+<script>
+	var studentOne = new Object();
+	studentOne.firstName = "Nathan";
+	studentOne.lastName = "Bassett";
+	studentOne.gender = "Male";
+	studentOne.year = "Sophomore";
+
+	//Display object properties
+    document.getElementById("lit").innerHTML = 
+    "Name: " + "<span style="color:red;">" + studentOne.firstName+ "</span>" + " " +
+    "<span style="color:red;">" + studentOne.lastName "</span>" + "<br>" +
+    "Gender: " + "<span style="color:red;">" + studentOne.gender + "</span>" + "<br>" +
+    "Year: " + "<span style="color:red;">" + studentOne.year + "</span>" + "<br>" +
+    "Major: " + "<span style="color:red;">" + studentOne.major + "</span>" + "<br>";
+</script>
+
 </html>
