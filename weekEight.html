@@ -101,7 +101,8 @@ var studentOne = new Object();
 <h2>Using a Constructor (ideal method)</h2>
 <pre>
 </pre>
-<p id="constr"></p>
+<p id="constrOne"></p>
+<p id="constrTwo"></p>
 <script>
 	function newStudent(fName, lName, gen, yr, mjr)
 	{
@@ -116,7 +117,7 @@ var studentOne = new Object();
 	var studentThree = new newStudent("Jacob", "Bassett", "Male", "Sophomore", "Web Design");
 
 	//Display object properties studentTwo
-    document.getElementById("newObj").innerHTML = 
+    document.getElementById("constrOne").innerHTML = 
     "Name: "  + studentTwo.firstName + " " +
       studentTwo.lastName  + "<br>" +
     "Gender: "  + studentTwo.gender  + "<br>" +
@@ -124,7 +125,7 @@ var studentOne = new Object();
     "Major: "  + studentTwo.major  + "<br>";
 
     //Display object properties studentThree
-    document.getElementById("newObj").innerHTML = 
+    document.getElementById("constrTwo").innerHTML = 
     "Name: "  + studentThree.firstName + " " +
       studentTwo.lastName  + "<br>" +
     "Gender: "  + studentThree.gender  + "<br>" +
