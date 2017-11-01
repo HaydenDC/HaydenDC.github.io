@@ -151,9 +151,9 @@ EXAMPLE:
 		this.gPA = gpa
 
 		//Member Method
-    	this.displayGPA = function (gpa){
+    	this.displayGPA = function (){
     		document.getElementById("constrOneA").innerHTML =
-    		this.gpa + "<br>";
+    		this.gPA + "<br>";
 
 		}
 	}
@@ -168,7 +168,7 @@ EXAMPLE:
     "Gender: "  + studentTwo.gender  + "<br>" +
     "Year: "  + studentTwo.year  + "<br>" +
     "Major: "  + studentTwo.major  + "<br>";
-    studentTwo.displayGPA(studentTwo.gPA);
+    studentTwo.displayGPA();
 
     //Display object properties studentTwo
     document.getElementById("constrOne").innerHTML = 
@@ -177,7 +177,7 @@ EXAMPLE:
     "Gender: "  + studentThree.gender  + "<br>" +
     "Year: "  + studentThree.year  + "<br>" +
     "Major: "  + studentThree.major  + "<br>";
-    studentThree.displayGPA(studentTwo.gPA);
+    studentThree.displayGPA();
 
  
 </script>
