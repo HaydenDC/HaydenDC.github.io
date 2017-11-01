@@ -117,8 +117,8 @@ EXAMPLE:
 		<span style="color:purple;">this.major</span> = mjr;
 	}
 
-	var studentTwo = new newStudent("Sean", "Carlson", "Male", "Sophomore", "Biology");
-	var studentThree = new newStudent("Jacob", "Bassett", "Male", "Sophomore", "Web Design");
+	var studentTwo = <span style="color:purple;">new newStudent</span>("Sean", "Carlson", "Male", "Sophomore", "Biology");
+	var studentThree = <span style="color:purple;">new newStudent</span>("Jacob", "Bassett", "Male", "Sophomore", "Web Design");
 
 	//Display object properties studentTwo
     document.getElementById("constrOne").innerHTML = 
@@ -147,6 +147,15 @@ EXAMPLE:
 		this.gender = gen;
 		this.year = yr;
 		this.major = mjr;
+		//Display object properties studentThree
+    	this.displayStudentThree = function (fiName, laName, genD, yeaR, maJ){
+    	document.getElementById("constrTwo").innerHTML = 
+    	"Name: "  + studentThree.fiName + " " +
+     	 studentThree.laName  + "<br>" +
+    	"Gender: "  + studentThree.genD  + "<br>" +
+    	"Year: "  + studentThree.yeaR  + "<br>" +
+    	"Major: "  + studentThree.maJ  + "<br>";
+		}
 	}
 
 	var studentTwo = new newStudent("Sean", "Carlson", "Male", "Sophomore", "Biology");
@@ -160,13 +169,8 @@ EXAMPLE:
     "Year: "  + studentTwo.year  + "<br>" +
     "Major: "  + studentTwo.major  + "<br>";
 
-    //Display object properties studentThree
-    document.getElementById("constrTwo").innerHTML = 
-    "Name: "  + studentThree.firstName + " " +
-      studentThree.lastName  + "<br>" +
-    "Gender: "  + studentThree.gender  + "<br>" +
-    "Year: "  + studentThree.year  + "<br>" +
-    "Major: "  + studentThree.major  + "<br>";
+    //Call function to display studentThree
+
 </script>
 
 </html>
