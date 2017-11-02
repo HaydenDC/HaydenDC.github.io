@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body style="font-family: verdana">
+	<a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
 <h1>JavaScript-Object Creation Functions, Inheritance, Properties, Methods, Insantiation</h1>
 
 <!--Object Literal-->
-<h2>Object literal</h2>
+<h2>-Object literal-</h2>
 <pre>
    Creating an object in Javascript can be done as a 
 literal. This is very similar to an associative array.
@@ -29,7 +30,7 @@ var student =
     "Gender: " + <span style="color:red;">student.gender</span> +
     "Year: " + <span style="color:red;">student.year</span>  +
     "Major: " + <span style="color:red;">student.major</span>;
-<b>The Result:<b>
+<b>The Result:</b>
 </pre>
 
 <p id="lit"></p>
@@ -56,7 +57,7 @@ var student =
 </script>
 
 <!--Object using "new"-->
-<h2>Object using "new"</h2>
+<h2>-Object using "new"-</h2>
 <pre>
 	You can use the "new" keyword to create
 the object. This lets you use the "." operator
@@ -78,7 +79,7 @@ var studentOne = new Object();
     "Year: " + <span style="color:red;">studentOne.year</span>  +
     "Major: " + <span style="color:red;">studentOne.major</span>;
 
- <b>The Result</b>
+ <b>The Result:</b>
 </pre>
 
 <p id="newObj"></p>
@@ -100,7 +101,7 @@ var studentOne = new Object();
 </script>
 
 <!--Object with a constructor-->
-<h2>Using a Constructor (ideal method)</h2>
+<h2>-Using a Constructor (ideal method)-</h2>
 <pre>
 	Using a constructor is a more effective way to create
 objects. This is similar to creating a class and then 
@@ -132,10 +133,12 @@ EXAMPLE:
     //Display object properties studentThree
     document.getElementById("constrTwo").innerHTML = 
     "Name: "  + studentThree.firstName + " " +
-      studentThree.lastName  + "<br>" +
-    "Gender: "  + studentThree.gender  + "<br>" +
-    "Year: "  + studentThree.year  + "<br>" +
-    "Major: "  + studentThree.major  + "<br>";
+      studentThree.lastName  + " " +
+    "Gender: "  + studentThree.gender  + " " +
+    "Year: "  + studentThree.year  + " " +
+    "Major: "  + studentThree.major  + " ";
+
+ <b>The Result:</b>
 </pre>
 <p id="constrOne"></p>
 <p id="constrOneA"></p>
@@ -189,7 +192,7 @@ EXAMPLE:
  
 </script>
 
-<h2>Inheritance</h2>
+<h2>-Inheritance-</h2>
 <pre>
 	Objects inherit properties and methods from their
 prototype (class definition). If you want to add a
@@ -218,7 +221,7 @@ Property:
 Method:
 <span style="color:blue">newStudent.<b>prototype</b>.fullName = funciton(){
 	return this.firstName + " " + this.lastName;
-};
+};</span>
 
 </pre>
 
