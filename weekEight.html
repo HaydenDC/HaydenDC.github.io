@@ -189,4 +189,37 @@ EXAMPLE:
  
 </script>
 
+<h2>Inheritance</h2>
+<pre>
+	Objects inherit properties and methods from their
+prototype (class definition). If you want to add a
+property or a method to an object that was not defined
+in the prototype, you would do the following:
+
+<span style="color:blue">studentThree.age = 26;</span>
+
+	This will add the "age" property to the object 
+"studentThree" only. If you wish to add a new method 
+to an object only, the following would suffice:
+
+<span style="color:blue">studentThree.fullName = function(){
+	return this.firstName + " " + this.lastName;
+};</span>
+
+	A way to add properties or method to a prototype,
+the best way is to go into the prototype itselft and 
+add the property or method. Another option would be
+to use the <b>prototype</b> property. This will add
+the property or method to the prototype. An example:
+
+Property:
+<span style="color:blue">newStudent.<b>prototype</b>.age;</span>
+
+Method:
+<span style="color:blue">newStudent.<b>prototype</b>.fullName = funciton(){
+	return this.firstName + " " + this.lastName;
+};
+
+</pre>
+
 </html>
