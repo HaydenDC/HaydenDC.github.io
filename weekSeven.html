@@ -8,7 +8,7 @@
 	function sendRequest()
 	{
 		var xmlHttp = new XMLHttpRequest();
-		xmlHttp.onreadystatechange = funciton()
+		xmlHttp.onreadystatechange = function()
 		{
 			if(this.readyState == 4 && this.status == 200)
 			{
@@ -25,7 +25,7 @@
 </script>
 
 <h2>Click the button</h2>
-<button onclick="sendRequest()" style="border: solid black 2px; background-color: lightblue;">
+<button onclick="sendRequest()" style="border: solid black 2px; background-color: maroon;">
 Click Me</button>
 
 <p id="theResult"><p>
