@@ -13,7 +13,7 @@
 			if(this.readyState == 4 && this.status == 200)
 			{
 				var reult = JSON.parse(xmlHttp.responseText);
-				document.getElementById("theResult").innerHTML = xmlHttp.body;
+				document.getElementById("theResult").innerHTML = xmlHttp.name;
 			}
 			else
 				document.getElementById("theResult").innerHTML = "Did not get any data."
