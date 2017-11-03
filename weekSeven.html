@@ -18,7 +18,7 @@
 			if(this.readyState == 4 && this.status == 200)
 			{
 				var reult = JSON.parse(xmlHttp.responseText);
-				document.getElementById("theResult").innerHTML = xmlHttp.name;
+				document.getElementById("theResult").innerHTML = this.name;
 			}
 			else
 				document.getElementById("theResult").innerHTML = "Did not get any data."
