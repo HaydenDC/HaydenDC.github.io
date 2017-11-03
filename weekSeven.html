@@ -18,7 +18,7 @@
 			if(this.readyState == 4 && this.status == 200)
 			{
 				var result = JSON.parse(xmlHttp.responseText);
-				document.getElementById("theResult").innerHTML = result.name;
+				document.getElementById("theResult").innerHTML = result;
 			}
 			else
 				document.getElementById("theResult").innerHTML = "Did not get any data."
@@ -30,7 +30,8 @@
 </script>
 <button onclick="sendRequest()" style="border: solid black 2px; background-color: maroon;">
 Click Me</button>
-
+<p id="theResult"><p><br>
+<a href="https://haydendc.github.io/weekFourJSON.json">The JSON file</a>
 
 
 </body>
