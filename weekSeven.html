@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: verdana">
+	<a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
+
+<!--Script to request data-->
+<script>
+	function sendRequest()
+	{
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.onreadystatechange = funciton()
+		{
+			if(this.readyState == 4 && this.status == 200)
+			{
+				var reult = JSON.parse(xmlHttp.responseText);
+				document.getElementById("theResult").innerHTML = xmlHttp.body;
+			}
+			else
+				document.getElementById("theResult").innerHTML = "Did not get any data."
+		}
+		xmlHttp.open("GET","weekFourJSON.json", true);
+		xmlHttpsend();
+	}
+
+</script>
+
+<h2>Click the button</h2>
+<button onclick="sendRequest()" style="border: solid black 2px; background-color: lightblue;">
+Click Me</button>
+
+<p id="theResult"><p>
+
+</body>
+</html>
