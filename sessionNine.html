@@ -4,5 +4,71 @@
 	<a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
 	<h1>Session Storage</h1>
 
+<script>
+	function countUp()
+	{
+		//Check to see if browser supports session storage
+		if(typeof(Storage) !== "undefined")
+		{
+			//Make session storage object
+			if(sessionStorage.clickCnt)
+			{
+				//Converts storage from a string to a number
+				sessionStorage.clickCnt = Number(sessionStorage.clickCnt)+1;
+			}
+
+			//If clickCnt doesn't exist
+			else
+			{
+				sessionStorage.clickCnt = 1;
+			}
+			document.getElementById("counter").innerHTML = "Count is: " + sessionStorage.clickCnt;
+		}
+
+		//If there is no storage..
+		else
+		{
+			document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
+		}
+	}
+</script>
+
+<button onclick="countUp()" type="button">
+	Count Up
+</button>
+<br>
+<div id="counter">
+</div>
+<br>
+
+<pre>
+function countUp()
+	{
+		//Check to see if browser supports session storage
+		<span style="color: orange">if(typeof(Storage) !== "undefined")</span>
+		{
+			//Make session storage object
+			<span style="color: blue">if(sessionStorage.clickCnt)</span>
+			{
+				//Converts storage from a string to a number
+				<span style="color: blue">sessionStorage.clickCnt</span> = <span style="color: purple">Number</span>(sessionStorage.clickCnt)+1;
+			}
+
+			//If clickCnt doesn't exist
+			else
+			{
+				sessionStorage.clickCnt = 1;
+			}
+			document.getElementById("counter").innerHTML = "Count is: " + <span style="color: blue">sessionStorage.clickCnt;</span>
+		}
+
+		//If there is no storage..
+		else
+		{
+			document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
+		}
+	}
+</pre>
+
 </body>
 </html>
