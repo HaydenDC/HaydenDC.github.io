@@ -4,5 +4,41 @@
 	<a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
 	<h1>Local Storage</h1>
 
+<script>
+	function countUP()
+	{
+		//Check to see if browser supports local storage
+		if(typeof(Storage) !== "undefined")
+		{
+			//Make local storage object
+			if(localStorage.clickCnt)
+			{
+				//Converts storage from a string to a number
+				localStorage.clickCnt = Number(localStorage.clickCnt)+1;
+			}
+
+			//If clickCnt doesn't exist
+			else
+			{
+				localStorage.clickCnt = 0;
+			}
+			document.getElementById("counter").innerHTML = "Count is: " + localStorage.clickCnt;
+		}
+
+		//If there is no storage..
+		else
+		{
+			document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
+		}
+	}
+</script>
+
+<button onclick="countUp()" type="button">
+	Count Up
+</button>
+<br>
+<div id="counter">
+</div>
+
 </body>
 </html>
