@@ -20,7 +20,7 @@
 			//If clickCnt doesn't exist
 			else
 			{
-				localStorage.clickCnt = 0;
+				localStorage.clickCnt = 1;
 			}
 			document.getElementById("counter").innerHTML = "Count is: " + localStorage.clickCnt;
 		}
@@ -39,6 +39,36 @@
 <br>
 <div id="counter">
 </div>
+<br>
+
+<pre>
+function countUp()
+	{
+		//Check to see if browser supports local storage
+		<span style="color: orange">if(typeof(Storage) !== "undefined")</span>
+		{
+			//Make local storage object
+			<span style="color: blue">if(localStorage.clickCnt)</span>
+			{
+				//Converts storage from a string to a number
+				<span style="color: blue">localStorage.clickCnt</span> = <span style="color: purple">Number</span>(localStorage.clickCnt)+1;
+			}
+
+			//If clickCnt doesn't exist
+			else
+			{
+				localStorage.clickCnt = 1;
+			}
+			document.getElementById("counter").innerHTML = "Count is: " + <span style="color: blue">localStorage.clickCnt;
+		}
+
+		//If there is no storage..
+		else
+		{
+			document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
+		}
+	}
+</pre>
 
 </body>
 </html>
