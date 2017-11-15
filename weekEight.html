@@ -242,7 +242,7 @@ function addText(){
 		var nTextNode = document.createTextNode("You clicked the button!");
 		listIt.appendChild(nTextNode);
 		var myList = document.getElementById("iDom");
-		myList.insertBefore(myList.childNodes[0]);
+		myList.insertBefore(listIt, myList.childNodes[0]);
 		//document.getElementById("iDom").appendChild(listIt);
 	
 
