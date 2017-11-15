@@ -237,12 +237,12 @@ var newPara = document.createElement("p");
 
 	
 		//Remove original text
-		document.getElementById("iDom").removeChild(newPara);
+		//document.getElementById("iDom").removeChild(newPara);
 
 		//Add new text
 		var nTextNode = document.createTextNode("You clicked the button!");
 		newPara.appendChild(nTextNode);
-		document.getElementById("iDom").appendChild(newPara);
+		document.getElementById("iDom").replaceChild(newPara);
 	
 
 }
