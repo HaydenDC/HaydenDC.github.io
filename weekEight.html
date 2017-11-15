@@ -236,7 +236,11 @@ function countClick(){
 var newPara = document.createElement("p");
 
 	
-		var nTextNode = document.createTextNode("You clicked the button! Change me back!");
+		//Remove original text
+		document.getElementById("iDom").removeChild(newPara);
+
+		//Add new text
+		var nTextNode = document.createTextNode("You clicked the button!");
 		newPara.appendChild(nTextNode);
 		document.getElementById("iDom").appendChild(newPara);
 	
