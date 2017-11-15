@@ -11,39 +11,48 @@ div{
 	background-color: blue;
 	animation-name: weekTen;
 	animation-duration: 10s;
+	animation-play-state:paused;
+}
+
+div:hover
+{
+	animation-play-state: running;
 }
 
 @keyframes div1
 {
-
+	from {background-color: blue;}
+	to   {background-color: red;}
 }
 
 #div1 
 {
-	from {background-color: blue;}
-	to   {background-color: red;}
+
 }
 
 #div2
 {
-	from {background-color: blue;}
-	to   {background-color: red;}
+	
 }
 
 #div3
 {
-	from {background-color: blue;}
-	to   {background-color: red;}
+
 }
 
 #div4
 {
-	from {background-color: blue;}
-	to   {background-color: red;}
+
+}
+
+#divH
+{
+	animation-play-state: paused;
 }
 
 </style>
 
+<div id="divH">Hover</div><br>
 <div id="div1">1</div>
 <div id="div2">2</div>
 <div id="div3">3</div>
