@@ -236,6 +236,7 @@ function countClick(){
 var newPara = document.createElement("p");
 
 	//count
+	var theCount;
 	if(typeof(Storage) !== "undefined")
 		{
 			//Make session storage object
@@ -243,6 +244,7 @@ var newPara = document.createElement("p");
 			{
 				//Converts storage from a string to a number
 				sessionStorage.clickCnt = Number(sessionStorage.clickCnt)+1;
+				theCount = session.clickCnt
 			}
 
 			//If clickCnt doesn't exist
