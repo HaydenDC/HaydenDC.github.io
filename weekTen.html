@@ -9,6 +9,8 @@ div{
 	height: 100px;
 	position: relative;
 	background-color: blue;
+	text-align: center;
+	color: white;
 	animation-name: weekTen;
 	animation-duration: 8s;
 	animation-play-state:paused;
@@ -28,7 +30,7 @@ div:hover
 #div1 
 {
 	animation-name: divO;
-	animation-play-state: running;
+	animation-play-state: paused;
 	border: 2px solid red;
 
 }
@@ -40,7 +42,7 @@ div:hover
 	   border: 2px solid red;
 	   background-color: blue;
 	}
-	
+
 	to   
 	{
 		border: 2px solid blue;
@@ -51,31 +53,199 @@ div:hover
 
 #div2
 {
+	animation-name: divTw;
+	animation-play-state: paused;
+	border: 2px solid red;
 	
+}
+
+@keyframes divTw
+{
+	from 
+	{
+	   border: 2px solid red;
+	   border-radius: 0px;
+	   background-color: blue;
+	}
+
+	to   
+	{
+		border: 2px solid black;
+		border-radius: 15px;
+		background-color: red;
+	}
+
 }
 
 #div3
 {
+	animation-name: divTh;
+	animation-play-state: paused;
+	border: 2px solid red;
+}
+
+@keyframes divTh
+{
+	from 
+	{
+	   border: 2px solid red;
+	   background-color: blue;
+	   left: 0px;
+	}
+
+	to   
+	{
+		border: 2px solid blue;
+		background-color: red;
+		left: 300px;
+	}
 
 }
 
 #div4
 {
+	animation-name: divF;
+	animation-play-state: paused;
+	animation-timing-function: ease-in-out;
+	border: 2px solid red;
+}
+
+@keyframes divF
+{
+	from 
+	{
+	   border: 2px solid red;
+	   background-color: blue;
+	   left:0px;
+	}
+
+	to   
+	{
+		border: 2px solid blue;
+		background-color: red;
+		left:300px;
+	}
 
 }
 
 #divH
 {
+	animation-name: divHo;
+	animation-play-state: paused;
+	border: 2px solid red;
+}
+
+@keyframes divHo
+{
+	from 
+	{
+	   border: 2px solid red;
+	   background-color: blue;
+	   color: white;
+	}
+
+	to   
+	{
+		border: 2px solid blue;
+		background-color: red;
+		color: blue;
+	}
+
+}
+
+#divC
+{
+	animation-name: divTh;
+	animation-play-state: running;
+	animation-duration: 240s;
+	border: 2px solid red;
+
+}
+
+@keyframes divCo
+{
+	0% 
+	{
+	   border: 2px solid #FF0000;
+	   background-color: #0000FF;
+	}
+
+	10%   
+	{
+		border: 2px solid #FF8000;
+		background-color: #8000FF;
+	}
+
+	20%
+	{
+		border: 2px solid #FFFF00;
+		background-color: #FF00FF;
+	}
+
+	30%
+	{
+		border: 2px solid #80FF00;
+		background-color: #FF0080;
+	}
+
+	40%
+	{
+		border: 2px solid #00FF00;
+		background-color: #FF0000;
+	}
+
+	50%
+	{
+		border: 2px solid #00FF80;
+		background-color: #FF8000;
+	}
+
+	60%
+	{
+		border: 2px solid #00FFFF;
+		background-color: #FFFF00;
+	}
+
+	70%
+	{
+		border: 2px solid #0080FF;
+		background-color: #80FF00;
+	}
+
+	80%
+	{
+		border: 2px solid #0000FF;
+		background-color: #00FF00;
+	}
+
+	90%
+	{
+		border: 2px solid #8000FF;
+		background-color: #00FF80;
+	}
+
+	95%
+	{
+		border: 2px solid #FF00FF;
+		background-color: #00FFFF;
+	}
+
+	100%
+	{
+		border: 2px solid #FF0080;
+		background-color: #0080FF;
+	}
 
 }
 
 </style>
 
 <div id="divH">Hover</div><br>
-<div id="div1">1</div>
-<div id="div2">2</div>
-<div id="div3">3</div>
-<div id="div4">4</div>
+<div id="div1">1</div><br>
+<div id="div2">2</div><br>
+<div id="div3">3</div><br>
+<div id="div4">4</div><br>
+<div id="divC">5</div><br>
 
 
 </body>
