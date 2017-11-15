@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: verdana">
+	<a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
+	<h1>Animations code</h1>
+
+<pre>
+&lt;style&gt;
+div{
+	width: 100px;
+	height: 100px;
+	position: relative;
+	background-color: blue;
+	text-align: center;
+	color: white;
+	animation-name: weekTen;
+	animation-duration: 7s;
+	animation-play-state:paused;
+	animation-iteration-count: infinite;
+}
+
+div:hover
+{
+	animation-play-state: running;
+}
+
+
+
+@keyframes weekTen
+{
+	from {background-color: blue;}
+	to   {background-color: red;}
+}
+
+#div1 
+{
+	animation-name: divO;
+	
+	border: 2px solid red;
+
+}
+
+@keyframes divO
+{
+	from 
+	{
+	   border: 2px solid red;
+	   background-color: blue;
+	}
+
+	to   
+	{
+		border: 2px solid blue;
+		background-color: red;
+	}
+
+}
+
+#div2
+{
+	animation-name: divTw;
+	
+	border: 2px solid red;
+	
+}
+
+@keyframes divTw
+{
+	from 
+	{
+	   border: 2px solid red;
+	   border-radius: 0px;
+	   background-color: blue;
+	}
+
+	to   
+	{
+		border: 5px solid black;
+		border-radius: 35px;
+		background-color: red;
+	}
+
+}
+
+#div3
+{
+	animation-name: divTh;
+	
+	border: 2px solid red;
+}
+
+@keyframes divTh
+{
+	from 
+	{
+	   border: 2px solid red;
+	   background-color: blue;
+	   left: 0px;
+	}
+
+	to   
+	{
+		border: 2px solid blue;
+		background-color: red;
+		left: 300px;
+	}
+
+}
+
+#div4
+{
+	animation-name: divF;
+	
+	animation-timing-function: ease-in-out;
+	border: 2px solid red;
+}
+
+@keyframes divF
+{
+	from 
+	{
+	   border: 2px solid red;
+	   background-color: blue;
+	   left:0px;
+	}
+
+	to   
+	{
+		border: 2px solid blue;
+		background-color: red;
+		left:300px;
+	}
+
+}
+
+#divH
+{
+	animation-name: divHo;
+	
+	border: 2px solid red;
+}
+
+@keyframes divHo
+{
+	from 
+	{
+	   border: 2px solid red;
+	   background-color: blue;
+	   color: white;
+	}
+
+	to   
+	{
+		border: 2px solid blue;
+		background-color: red;
+		color: blue;
+	}
+
+}
+
+#divC
+{
+	animation-name: divCo;
+	animation-play-state: running;
+	animation-duration: 120s;
+	border: 2px solid red;
+
+}
+
+@keyframes divCo
+{
+	0% 
+	{
+	   border: 2px solid #FF0000;
+	   background-color: #0000FF;
+	}
+
+	10%   
+	{
+		border: 2px solid #FF8000;
+		background-color: #8000FF;
+	}
+
+	20%
+	{
+		border: 2px solid #FFFF00;
+		background-color: #FF00FF;
+	}
+
+	30%
+	{
+		border: 2px solid #80FF00;
+		background-color: #FF0080;
+	}
+
+	40%
+	{
+		border: 2px solid #00FF00;
+		background-color: #FF0000;
+	}
+
+	50%
+	{
+		border: 2px solid #00FF80;
+		background-color: #FF8000;
+	}
+
+	60%
+	{
+		border: 2px solid #00FFFF;
+		background-color: #FFFF00;
+	}
+
+	70%
+	{
+		border: 2px solid #0080FF;
+		background-color: #80FF00;
+	}
+
+	80%
+	{
+		border: 2px solid #0000FF;
+		background-color: #00FF00;
+	}
+
+	90%
+	{
+		border: 2px solid #8000FF;
+		background-color: #00FF80;
+	}
+
+	95%
+	{
+		border: 2px solid #FF00FF;
+		background-color: #00FFFF;
+	}
+
+	100%
+	{
+		border: 2px solid #FF0080;
+		background-color: #0080FF;
+	}
+
+}
+
+&lt;/style&gt;
+
+&lt;div id="divH"&gt;Hover&lt;/div&gt;&lt;br&gt;
+&lt;div id="div1"&gt;1&lt;/div&gt;&lt;br&gt;
+&lt;div id="div2"&gt;2&lt;/div&gt;&lt;br&gt;
+&lt;div id="div3"&gt;3&lt;/div&gt;&lt;br&gt;
+&lt;div id="div4"&gt;4&lt;/div&gt;&lt;br&gt;
+&lt;div id="divC"&gt;5&lt;/div&gt;&lt;br&gt;
+
+</pre>
+
+</body>
+</html>
