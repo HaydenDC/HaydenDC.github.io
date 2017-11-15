@@ -226,12 +226,13 @@ Method:
 
 <h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
 
-<p id="iDom">Click the button to change the text</p>
+<p id="iDom">Click the button to add another line of text!</p>
 <br>
-<button onclick="countClick()">Button</button>
+<button onclick="addText()">Add</button>
+<button onclick="removeText()">Remove</button>
 <script>
 
-function countClick(){
+function addText(){
 
 var newPara = document.createElement("p");
 
@@ -242,9 +243,16 @@ var newPara = document.createElement("p");
 		//Add new text
 		var nTextNode = document.createTextNode("You clicked the button!");
 		newPara.appendChild(nTextNode);
-		document.getElementById("iDom").replaceChild(newPara);
+		document.getElementById("iDom").appendChild(newPara);
 	
 
+}
+
+function removeText()
+{
+	var textList = document.getElementById("p");
+
+	textList.removeChild(textList.childNodes[0]);
 }
 </script>
 
