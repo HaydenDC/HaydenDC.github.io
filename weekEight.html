@@ -235,46 +235,11 @@ function countClick(){
 
 var newPara = document.createElement("p");
 
-	//count
-	var theCount;
-	if(typeof(Storage) !== "undefined")
-		{
-			//Make session storage object
-			if(sessionStorage.clickCnt)
-			{
-				//Converts storage from a string to a number
-				sessionStorage.clickCnt = Number(sessionStorage.clickCnt)+1;
-				theCount = sessionStorage.clickCnt;
-			}
-
-			//If clickCnt doesn't exist
-			else
-			{
-				sessionStorage.clickCnt = 1;
-			}
-			
-		}
-
-		//If there is no storage..
-		else
-		{
-			
-		}
-	//Switch Statment
-	switch(theCount)
-	{
-		case 1:
+	
 		var nTextNode = document.createTextNode("You clicked the button! Change me back!");
 		newPara.appendChild(nTextNode);
 		document.getElementById("iDom").appendChild(newPara);
-		break;
-
-		case 2:
-		document.getElementById("iDom").innerHTML = "Now 2";
-
-
-
-	}
+	
 
 }
 </script>
