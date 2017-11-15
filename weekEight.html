@@ -222,8 +222,48 @@ Method:
 <span style="color:blue">newStudent.<b>prototype</b>.fullName = funciton(){
 	return this.firstName + " " + this.lastName;
 };</span>
+</pre>
 
 <h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
-</pre>
+
+<p>Click the button to change the text</p>
+<br>
+<button>Button</button>
+<script>
+
+function countClick(){
+
+	//count
+	if(typeof(Storage) !== "undefined")
+		{
+			//Make session storage object
+			if(sessionStorage.clickCnt)
+			{
+				//Converts storage from a string to a number
+				sessionStorage.clickCnt = Number(sessionStorage.clickCnt)+1;
+			}
+
+			//If clickCnt doesn't exist
+			else
+			{
+				sessionStorage.clickCnt = 1;
+			}
+			
+		}
+
+		//If there is no storage..
+		else
+		{
+			
+		}
+	//Switch Statment
+	switch()
+	{
+
+	}
+
+}
+</script>
+
 </body>
 </html>

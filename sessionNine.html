@@ -7,22 +7,23 @@
 <script>
 	function countUp()
 	{
+		var sV = sessionStorage.clickCnt;
 		//Check to see if browser supports session storage
 		if(typeof(Storage) !== "undefined")
 		{
 			//Make session storage object
-			if(sessionStorage.clickCnt)
+			if(sV)
 			{
 				//Converts storage from a string to a number
-				sessionStorage.clickCnt = Number(sessionStorage.clickCnt)+1;
+				sV = Number(sessionStorage.clickCnt)+1;
 			}
 
 			//If clickCnt doesn't exist
 			else
 			{
-				sessionStorage.clickCnt = 1;
+				sV = 1;
 			}
-			document.getElementById("counter").innerHTML = "Count is: " + sessionStorage.clickCnt;
+			document.getElementById("counter").innerHTML = "Count is: " + sV;
 		}
 
 		//If there is no storage..
