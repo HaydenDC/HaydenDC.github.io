@@ -226,7 +226,9 @@ Method:
 
 <h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
 
-<p id="iDom">Click the button to add another line of text!</p>
+<ul id="iDom">
+	<li>Click the button to add another line of text!</li>
+</ul>
 <br>
 <button onclick="addText()">Add</button>
 <button onclick="removeText()">Remove</button>
@@ -234,16 +236,14 @@ Method:
 
 function addText(){
 
-var newPara = document.createElement("p");
-
-	
-		//Remove original text
-		//document.getElementById("iDom").removeChild(newPara);
+		var listIt = document.createElement("li");
 
 		//Add new text
 		var nTextNode = document.createTextNode("You clicked the button!");
-		newPara.appendChild(nTextNode);
-		document.getElementById("iDom").appendChild(newPara);
+		listIt.appendChild(nTextNode);
+		var myList = document.getElementById("iDom");
+		myList.insertBefore(listIt.myList.childNodes[0]);
+		document.getElementById("iDom").appendChild(listIt);
 	
 
 }
