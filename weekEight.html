@@ -261,12 +261,16 @@ var newPara = document.createElement("p");
 			
 		}
 	//Switch Statment
-	switch(sessionStorage.clickCnt)
+	switch(theCount)
 	{
 		case 1:
 		var nTextNode = document.createTextNode("You clicked the button! Change me back!");
 		newPara.appendChild(nTextNode);
 		document.getElementById("iDom").appendChild(newPara);
+		break;
+
+		case 2:
+		document.getElementById("iDom").innerHTML = "Now 2";
 
 
 
