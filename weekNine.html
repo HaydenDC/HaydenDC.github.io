@@ -67,6 +67,17 @@ is with <b>localStorage</b> and the other is <b>sessionStorage</b>.
 
 }
 
+#dDiv{
+	width: 50px;
+	height:20px;
+	border: 2px solid black;
+	background-color: white;
+	color: blue;
+	position: relative;
+	text-align: center;
+
+}
+
 
 </style>
 
@@ -77,6 +88,7 @@ function activate() {
 	a();
 	b();
 	c();
+	d();
 
 
 	function a(){
@@ -158,10 +170,37 @@ function activate() {
  	 }
 	}
 }
+
+function d(){
+  var boxes = document.getElementById("dDiv");   
+  var position = 0;
+
+  //Default
+  		boxes.style.color = 'red';
+    	boxes.style.backgroundColor = '#ff9980';
+    	boxes.style.borderRadius = '0px';
+
+  var id = setInterval(frame, 40);
+  function frame() {
+    if (position == 34) {
+    	boxes.style.color = 'green';
+    	boxes.style.backgroundColor = '#80ff80';
+    	boxes.style.borderRadius = '5px';
+    	
+      clearInterval(id);
+    } else {
+      position++; 
+      boxes.style.top = position + 'px';
+      
+       
+   	 }
+  	}
+}
 </script>
 
 <div id="aDiv">3</div>
 <div id="bDiv">1</div>
+<div id="dDiv">4</div>
 <div id="cDiv">2</div>
 <br>
 <br>
