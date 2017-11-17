@@ -79,12 +79,13 @@ function activate() {
   var position = 0;
   var id = setInterval(frame, 40);
   function frame() {
-    if (position == 60) {
+    if (position == 50) {
+    	boxes.style.color = 'green';
       clearInterval(id);
     } else {
       position++; 
       boxes.style.top = position + 'px';
-      boxes.style.color = 'green';
+      
        
    	 }
   	}
@@ -97,11 +98,12 @@ function activate() {
   var id = setInterval(frame, 20);
   function frame() {
     if (position == -20) {
+    	boxes.style.color = 'green';
       clearInterval(id);
     } else {
       position--; 
       boxes.style.top = position + 'px';
-      boxes.style.color = 'green';
+      
        
    	 }
   	}
@@ -113,11 +115,12 @@ function activate() {
   var id = setInterval(frame, 20);
   function frame() {
     if (position == -20) {
+    	boxes.style.color = 'green';
       clearInterval(id);
     } else {
       position--; 
       boxes.style.top = position + 'px';
-      boxes.style.color = 'green'; 
+
       
     }
  	 }
