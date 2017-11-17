@@ -37,13 +37,13 @@ is with <b>localStorage</b> and the other is <b>sessionStorage</b>.
 
 #aDiv{
 	width: 175px;
-	height:125px;
+	height:50px;
 	border: 2px solid white;
 	background-color: white;
 	color: white;
 	animation-name: become;
 	animation-play-state: running;
-	animation-duration: 12s;
+	animation-duration: 15s;
 	animation-iteration-count: infinite;
 
 }
@@ -103,15 +103,19 @@ is with <b>localStorage</b> and the other is <b>sessionStorage</b>.
 	function activate()
 	{
 		var boxes = document.getElementById("aDiv");
-	    boxes.animation-play-state = "running";
+	    boxes.animation.play.state = "running";
 
 	}
 
 </script>
 
-<div id="aDiv">1</div>
-<div id="aDiv">2</div>
+<div id="aDiv" style="animation-delay: 1s">1</div>
+<div id="aDiv" style="animation-delay:3s">2</div>
 <div id="aDiv">3</div>
+<br>
+<br>
+<br>
+<br>
 
 </body>
 </html>
