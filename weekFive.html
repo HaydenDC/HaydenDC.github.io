@@ -78,11 +78,7 @@ function youClickedMe()
 {
 	document.getElementById("movingBox").style.color = "red";
 
-}
-
-function stopBox()
-{
-  var boxToMove = document.getElementById("movingBox");
+  var boxToStop = document.getElementById("movingBox");
   var pos = 0;
   var id = setInterval(moveFrame, 1);
   function moveFrame(){
@@ -92,14 +88,14 @@ function stopBox()
     }
     else{
       pos++;
-      boxToMove.style.color = 'green';
+      boxToStop.style.color = 'green';
     }
   }
 }
 
 </script>
   
-<div id="movingBox" onmouseover="stopBox()" onclick="youClickedMe()">
+<div id="movingBox" onclick="youClickedMe()">
 	Click Me
 </div>
 
