@@ -82,9 +82,15 @@ function activate() {
 	function a(){
   var boxes = document.getElementById("aDiv");   
   var position = 0;
+
+  //Default
+  		boxes.style.color = 'red';
+    	boxes.style.backgroundColor = '##ff9980';
+    	boxes.style.borderRadius = '0px';
+
   var id = setInterval(frame, 40);
   function frame() {
-    if (position == 53) {
+    if (position == 54) {
     	boxes.style.color = 'green';
     	boxes.style.backgroundColor = '#80ff80';
     	boxes.style.borderRadius = '5px';
@@ -103,6 +109,12 @@ function activate() {
   function b(){
   	var boxes = document.getElementById("bDiv");   
   var position = 0;
+
+  //Default
+  		boxes.style.color = 'red';
+    	boxes.style.backgroundColor = '##ff9980';
+    	boxes.style.borderRadius = '0px';
+
   var id = setInterval(frame, 20);
   function frame() {
     if (position == -20) {
@@ -123,6 +135,12 @@ function activate() {
   function c(){
   	var boxes = document.getElementById("cDiv");   
   var position = 0;
+
+  //Default
+  		boxes.style.color = 'red';
+    	boxes.style.backgroundColor = '##ff9980';
+    	boxes.style.borderRadius = '0px';
+    	
   var id = setInterval(frame, 20);
   function frame() {
     if (position == -19) {
