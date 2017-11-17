@@ -36,29 +36,29 @@ is with <b>localStorage</b> and the other is <b>sessionStorage</b>.
 <style>
 
 #aDiv{
-	width: 75px;
-	height:50px;
+	width: 50px;
+	height:20px;
 	border: 2px solid black;
 	background-color: white;
-	color: white;
+	color: red;
 	position: relative;
 }
 
 #bDiv{
-	width: 75px;
-	height:50px;
+	width: 50px;
+	height:20px;
 	border: 2px solid black;
 	background-color: white;
-	color: white;
+	color: black;
 	position: relative;
 }
 
 #cDiv{
-	width: 75px;
-	height:50px;
+	width: 50px;
+	height:20px;
 	border: 2px solid black;
 	background-color: white;
-	color: white;
+	color: blue;
 	position: relative;
 }
 
@@ -77,14 +77,14 @@ function activate() {
 	function a(){
   var boxes = document.getElementById("aDiv");   
   var position = 0;
-  var id = setInterval(frame, 30);
+  var id = setInterval(frame, 40);
   function frame() {
-    if (position == 60) {
+    if (position == 40) {
       clearInterval(id);
     } else {
       position++; 
-      boxes.style.top = position + 'px'; 
-      boxes.style.left = position + 'px'; 
+      boxes.style.top = position - 'px'; 
+       
    	 }
   	}
 }
@@ -93,14 +93,14 @@ function activate() {
   function b(){
   	var boxes = document.getElementById("bDiv");   
   var position = 0;
-  var id = setInterval(frame, 30);
+  var id = setInterval(frame, 20);
   function frame() {
-    if (position == 60) {
+    if (position == 20) {
       clearInterval(id);
     } else {
       position++; 
       boxes.style.top = position + 'px'; 
-      boxes.style.left = position + 'px'; 
+       
    	 }
   	}
 }
@@ -108,14 +108,14 @@ function activate() {
   function c(){
   	var boxes = document.getElementById("cDiv");   
   var position = 0;
-  var id = setInterval(frame, 30);
+  var id = setInterval(frame, 20);
   function frame() {
-    if (position == 60) {
+    if (position == 20) {
       clearInterval(id);
     } else {
       position++; 
       boxes.style.top = position + 'px'; 
-      boxes.style.left = position + 'px'; 
+      
     }
  	 }
 	}
