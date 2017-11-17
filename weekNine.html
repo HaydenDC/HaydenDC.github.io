@@ -98,8 +98,8 @@ function activate() {
     if (position == 0) {
       clearInterval(id);
     } else {
-      position++; 
-      boxes.style.top = position - 'px'; 
+      position--; 
+      boxes.style.top = position + 'px'; 
        
    	 }
   	}
@@ -113,8 +113,8 @@ function activate() {
     if (position == 0) {
       clearInterval(id);
     } else {
-      position++; 
-      boxes.style.top = position - 'px'; 
+      position--; 
+      boxes.style.top = position + 'px'; 
       
     }
  	 }
