@@ -79,11 +79,12 @@ function activate() {
   var position = 0;
   var id = setInterval(frame, 40);
   function frame() {
-    if (position == 40) {
+    if (position == 60) {
       clearInterval(id);
     } else {
       position++; 
-      boxes.style.top = position + 'px'; 
+      boxes.style.top = position + 'px';
+      boxes.style.color = 'green';
        
    	 }
   	}
@@ -99,7 +100,8 @@ function activate() {
       clearInterval(id);
     } else {
       position--; 
-      boxes.style.top = position + 'px'; 
+      boxes.style.top = position + 'px';
+      boxes.style.color = 'green';
        
    	 }
   	}
@@ -114,7 +116,8 @@ function activate() {
       clearInterval(id);
     } else {
       position--; 
-      boxes.style.top = position + 'px'; 
+      boxes.style.top = position + 'px';
+      boxes.style.color = 'green'; 
       
     }
  	 }
