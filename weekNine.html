@@ -31,6 +31,76 @@ is with <b>localStorage</b> and the other is <b>sessionStorage</b>.
 </pre>
 
 <h1>CSS3 Transition and Animation with JavaScript</h1>
+<button>Click Me</button>
+<br>
+<style>
+div{
+	width: 175px;
+	height:125px;
+	border: 2px solid white;
+	background-color: white;
+	color: white;
+	animation-name: become;
+	animation-play-state: paused;
+	animation-duration: 12s;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes become;
+{
+	
+	10%
+	{
+		border: 2px dashed #F5F5F5;
+		color: #B8B8B8;
+	}
+
+	25%
+	{
+		border: 2px dashed #E8E8E8;
+		color: #A9A9A9;
+	}
+
+	35%
+	{
+		border: 2px dashed #DCDCDC;
+		color: #A0A0A0;
+	}
+
+	60%
+	{
+		border: 2px dashed #D3D3D3;
+		color: #888888;
+	}
+
+	90%
+	{
+		border: 2px dashed #C0C0C0;
+		color: #707070;
+
+	}
+
+	100%
+	{
+		border: 2px dashed #B8B8B8;
+		color: #585858;
+
+	}
+
+
+}
+</style>
+
+<script>
+
+	function activate()
+	{
+		var boxes = document.getElementById("div");
+	    boxes.animation-play-state = "running";
+
+	}
+</script>
 
 </body>
 </html>
