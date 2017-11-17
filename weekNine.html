@@ -92,10 +92,10 @@ function activate() {
 
   function b(){
   	var boxes = document.getElementById("bDiv");   
-  var position = 20;
+  var position = 0;
   var id = setInterval(frame, 20);
   function frame() {
-    if (position == 0) {
+    if (position == -20) {
       clearInterval(id);
     } else {
       position--; 
@@ -107,10 +107,10 @@ function activate() {
 
   function c(){
   	var boxes = document.getElementById("cDiv");   
-  var position = 20;
+  var position = 0;
   var id = setInterval(frame, 20);
   function frame() {
-    if (position == 0) {
+    if (position == -20) {
       clearInterval(id);
     } else {
       position--; 
