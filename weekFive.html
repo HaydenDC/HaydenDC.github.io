@@ -57,14 +57,15 @@
 
 <script>
 	
-function slideBox(){
+function slideBox()
+{
 	var boxToMove = document.getElementById("movingBox");
 	var pos = 0;
 	var id = setInterval(moveFrame, 1);
 	function moveFrame(){
 		if (pos == 650){
 			
-			slideBox();
+			clearInterval(id);
 		}
 		else{
 			pos++;
@@ -73,18 +74,29 @@ function slideBox(){
 	}
 }
 
-function youClickedMe(){
+function youClickedMe()
+{
 	document.getElementById("movingBox").style.color = "red";
 
 }
 
-function stopBox(){
-  var boxToStop = document.getElementById("movingBox");
+function stopBox()
+{
+  var boxToMove = document.getElementById("movingBox");
   var pos = 0;
-  var id = setInterval(0);
+  var id = setInterval(moveFrame, 0);
+  function moveFrame(){
+    if (pos == 0){
+      
       clearInterval(id);
-   
+    }
+    else{
+      pos++;
+      boxToMove.style.left = pos + 'px';
+    }
+  }
 }
+
 </script>
   
 <div id="movingBox" onmouseover="stopBox()" onclick="youClickedMe()">
