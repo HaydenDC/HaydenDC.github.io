@@ -79,8 +79,10 @@ function activate() {
   var position = 0;
   var id = setInterval(frame, 40);
   function frame() {
-    if (position == 50) {
+    if (position == 51) {
     	boxes.style.color = 'green';
+    	boxes.style.radius = '2px';
+    	boxes.style.text.align = 'center';
       clearInterval(id);
     } else {
       position++; 
@@ -99,6 +101,8 @@ function activate() {
   function frame() {
     if (position == -20) {
     	boxes.style.color = 'green';
+    	boxes.style.radius = '2px'
+    	boxes.style.text.align = 'center';
       clearInterval(id);
     } else {
       position--; 
@@ -116,6 +120,8 @@ function activate() {
   function frame() {
     if (position == -20) {
     	boxes.style.color = 'green';
+    	boxes.style.radius = '2px';
+    	boxes.style.text.align = 'center';
       clearInterval(id);
     } else {
       position--; 
