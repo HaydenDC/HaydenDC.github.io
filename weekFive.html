@@ -84,7 +84,7 @@ function stopBox()
 {
   var boxToMove = document.getElementById("movingBox");
   var pos = 0;
-  var id = setInterval(moveFrame, 0);
+  var id = setInterval(moveFrame, 1);
   function moveFrame(){
     if (pos == 0){
       
@@ -92,7 +92,7 @@ function stopBox()
     }
     else{
       pos++;
-      boxToMove.style.left = pos + 'px';
+      boxToMove.style.color = 'green';
     }
   }
 }
