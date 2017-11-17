@@ -36,73 +36,68 @@ is with <b>localStorage</b> and the other is <b>sessionStorage</b>.
 <style>
 
 #aDiv{
-	width: 175px;
+	width: 75px;
 	height:50px;
 	border: 2px solid black;
 	background-color: white;
 	color: white;
 	position: relative;
-	animation-name: become;
-	animation-play-state: paused;
-	animation-duration: 15s;
-	animation-iteration-count: infinite;
-
 }
 
-@keyframes become
-{
-	0%
-	{
-		border: 2px solid white;
-		color: white;
-	}
-
-	10%
-	{
-		border: 2px dashed #F5F5F5;
-		color: #B8B8B8;
-	}
-
-	25%
-	{
-		border: 2px dashed #E8E8E8;
-		color: #A9A9A9;
-	}
-
-	35%
-	{
-		border: 2px dashed #DCDCDC;
-		color: #A0A0A0;
-	}
-
-	60%
-	{
-		border: 2px dashed #D3D3D3;
-		color: #888888;
-	}
-
-	90%
-	{
-		border: 2px dashed #C0C0C0;
-		color: #707070;
-
-	}
-
-	100%
-	{
-		border: 2px dashed #B8B8B8;
-		color: #585858;
-
-	}
-
-
+#bDiv{
+	width: 75px;
+	height:50px;
+	border: 2px solid black;
+	background-color: white;
+	color: white;
+	position: relative;
 }
+
+#cDiv{
+	width: 75px;
+	height:50px;
+	border: 2px solid black;
+	background-color: white;
+	color: white;
+	position: relative;
+}
+
+
 </style>
 
 <script>
 
 function activate() {
+	function a(){
   var boxes = document.getElementById("aDiv");   
+  var position = 0;
+  var id = setInterval(frame, 30);
+  function frame() {
+    if (position == 60) {
+      clearInterval(id);
+    } else {
+      position++; 
+      boxes.style.top = position + 'px'; 
+      boxes.style.left = position + 'px'; 
+    }
+  }
+
+  function b(){
+  	var boxes = document.getElementById("aDiv");   
+  var position = 0;
+  var id = setInterval(frame, 30);
+  function frame() {
+    if (position == 60) {
+      clearInterval(id);
+    } else {
+      position++; 
+      boxes.style.top = position + 'px'; 
+      boxes.style.left = position + 'px'; 
+    }
+  }
+
+  function c(){
+  	var boxes = document.getElementById("aDiv");   
   var position = 0;
   var id = setInterval(frame, 30);
   function frame() {
@@ -118,9 +113,9 @@ function activate() {
 
 </script>
 
-<div id="aDiv" style="animation-delay: 1s">1</div>
-<div id="aDiv" style="animation-delay:3s">2</div>
 <div id="aDiv">3</div>
+<div id="bDiv">1</div>
+<div id="cDiv">2</div>
 <br>
 <br>
 <br>
