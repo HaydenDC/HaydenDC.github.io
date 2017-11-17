@@ -81,17 +81,8 @@ function youClickedMe(){
 function stopBox(){
   var boxToStop = document.getElementById("movingBox");
   var pos = 0;
-  var id = setInterval(moveFrame, 0);
-  function moveFrame(){
-    if (pos == 650){
-      
       clearInterval(id);
-    }
-    else{
-      pos++;
-      boxToStop.style.left = pos + 'px';
-    }
-  }
+   
 }
 </script>
   
