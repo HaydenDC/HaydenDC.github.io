@@ -76,21 +76,10 @@ function slideBox()
 
 function youClickedMe()
 {
-	document.getElementById("movingBox").style.color = "red";
-
-  var boxToStop = document.getElementById("movingBox");
-  var pos = 0;
-  var id = setInterval(moveFrame, 1);
-  function moveFrame(){
-    if (pos == 0){
-      
-      clearInterval(id);
-    }
-    else{
-      pos++;
-      boxToStop.style.color = 'green';
-    }
-  }
+	var box = document.getElementById("movingBox").style.color = "red";
+  box.style.backgroundColor = "blue";
+  box.style.borderRadius = "10px";
+  
 }
 
 </script>
