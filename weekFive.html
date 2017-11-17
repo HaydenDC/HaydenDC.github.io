@@ -9,7 +9,7 @@
 }
 
 </style>
-<body style="font-family: verdana">
+<body onload="slideBox()" style="font-family: verdana">
 	<a href="https://haydendc.github.io/index.html">Back to my home page</a><br>
 <!--Manipulating CSS-->
   <h2>Manipulating CSS</h2>
@@ -64,7 +64,7 @@ function slideBox(){
 	function moveFrame(){
 		if (pos == 650){
 			
-			clearInterval(id);
+			slideBox();
 		}
 		else{
 			pos++;
@@ -77,9 +77,25 @@ function youClickedMe(){
 	document.getElementById("movingBox").style.color = "red";
 
 }
+
+function stopBox(){
+  var boxToStop = document.getElementById("movingBox");
+  var pos = 0;
+  var id = setInterval(moveFrame, 0);
+  function moveFrame(){
+    if (pos == 650){
+      
+      clearInterval(id);
+    }
+    else{
+      pos++;
+      boxToStop.style.left = pos + 'px';
+    }
+  }
+}
 </script>
   
-<div id="movingBox" onmouseover="slideBox()" onclick="youClickedMe()">
+<div id="movingBox" onmouseover="stopBox()" onclick="youClickedMe()">
 	Click Me
 </div>
 
