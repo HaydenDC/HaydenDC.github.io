@@ -34,7 +34,7 @@ is with <b>localStorage</b> and the other is <b>sessionStorage</b>.
 <button onclick="activate()">Click Me</button>
 <br>
 <style>
-div{
+#aDiv{
 	width: 175px;
 	height:125px;
 	border: 2px solid white;
@@ -96,14 +96,14 @@ div{
 
 	function activate()
 	{
-		var boxes = document.getElementById("div");
+		var boxes = document.getElementById("aDiv");
 	    boxes.animation-play-state = "running";
 
 	}
 </script>
-<div>1</div>
-<div>2</div>
-<div>3</div>
+<div id="aDive">1</div>
+<div id="aDive">2</div>
+<div id="aDive">3</div>
 
 </body>
 </html>
