@@ -2,44 +2,80 @@
 <html>
 <head>
 	<title>HDF-Irrigation</title>
-</head>
 
 	<style>
-	#title_bar
+	#div.container
 	{
-		background-color: #a6a6a6;
 		width: 100%;
-		height: auto;
+		border: 1px solid #003380;
 
 	}
 
-	#button_strip
+	header, footer
 	{
-		width: 100%;
-		height: auto;
-
+		padding: 1em;
+		color: white;
+		background-color: gray;
+		clear: left;
+		text-align: center;
 	}
 
-	#ajax_div
+	#nav
 	{
+		float: left;
+		max-width: 160px;
+		margin:0;
+		padding: 1em;
+	}
 
+	nav ul
+	{
+		list-style-type: none;
+		padding: 0;
+	}
+
+	nav ul a
+	{
+		text-decoration: none;
+	}
+
+	article
+	{
+		margin-left: 170px;
+		border-left: 1px solid gray;
+		padding: 1em;
+		overflow: hidden;
 	}
 
 
     </style>
-
+</head>
 <body style="background-color: #39ac39; margin: auto">
 
+<div class="container">
 <!--Title-->	
-	<div id="title_bar">
+	<header>
 		<p style="color: #003380; font-size: 250%; text-align:center">			
 		HD FOWLER: Irrigation</p>
-	</div><br>
+	</header>
 
 <!--Button div-->
-	<div id="button_strip">
-		<p>Buttons</p>
-	</div>
+	<nav>
+		<ul>
+			<li><a href="#">Branch Sales</a></li>
+			<li><a href="#">Branch Trainging</a></li>
+			<li><a href="#">Catalog</a></li>
+		</ul>
+	</nav>
+
+	<article>
+		<p>HD Fowler is a company that supplies all your irrigation needs. We are
+		here to make sure you have what you need and when you need it.</p>
+		<p>Our multiple locations make it easy for your company to have access accross
+		Washington, Idaho, and Oregon. Check and the site and see what's available!</p>
+	</article>
+
+	<footer>Copyright &copy; CIT-261 Final Project</footer>
 
 <!--	<img src="https://haydendc.github.io/hdfowlerlogo.png" alt="hdfl" style="float:right">
 -->
