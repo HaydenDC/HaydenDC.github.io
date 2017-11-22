@@ -84,7 +84,7 @@
     		{
     			if (this.readyState == 4 && this.status==200)
     			{
-    				document.getElementById("article").innerHTML = this.responseText;
+    				document.getElementById("main").innerHTML = this.responseText;
     			}
     		};
 
@@ -106,13 +106,13 @@
 <!--Button div-->
 	<nav>
 		<ul>
-			<li><a onclick="getTraining()">Branch Sales</a></li><br>
-			<li><a href="#">Branch Training</a></li><br>
+			<li><a href="#">Branch Sales</a></li><br>
+			<li><a onclick="getTraining()">Branch Training</a></li><br>
 			<li><a href="#">Catalog</a></li><br>
 		</ul>
 	</nav>
 
-	<article>
+	<article id="main">
 		<h1>HD Fowler</h1>
 		<p>HD Fowler is a company that supplies all your irrigation needs. We are
 		here to make sure you have what you need and when you need it.</p>
