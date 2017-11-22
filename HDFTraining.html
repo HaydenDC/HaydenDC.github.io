@@ -19,39 +19,48 @@
 		text-align: center;
 	}
 
-	nav
-	{
-		float: left;
-		max-width: 160px;
-		margin:0;
-		padding: 1em;
-	}
-
-	nav ul
-	{
-		list-style-type: none;
-		padding: 0;
-	}
-
-	nav ul a
+	.dropB
 	{
 		background-color: black;
-		color:white;
-		padding: 5px 10px;
-		text-decoration: none;
-		display:inline-block;
+		color: white;
+		padding: 10px;
+		font-size: 20px;
+		border: none;
+		cursor: pointer;
 	}
 
-	a:hover
+	.dropB:hover, .dropB:focus
 	{
-		animation-name: aLink;
-		animation-duration: .25s;
-		animation-fill-mode: forwards;
-		animation-timing-function: linear;
-		
+		background-color: #3e8e41;
 	}
 
-	
+	.dropD
+	{
+		position:relative;
+		display: inline-block;
+	}
+	.dropC
+	{
+		display: none;
+		position: absolute;
+		background-color: white;
+		min-width: 200px;
+		z-index: 1;
+		color: black;
+		display:box;
+
+	}
+
+	.dropC:hover
+	{
+		background-color: black;
+		color: white;
+	}
+
+	.show
+	{
+		display:block;
+	}
 
 	article
 	{
@@ -65,7 +74,10 @@
     </style>
 
     <script>
-    	
+    	function showMenu()
+    	{
+    		document.getElementById("dropMenu").classList.toggle("show");
+    	}
     </script>
 </head>
 <body style="margin: auto; font-family: verdana">
@@ -77,6 +89,28 @@
 		HD Fowler: Irrigation</h3>
 	</header>
 
+</div>
+
+<div class="dropD">
+	<button onclick="showMenu()" class="dropB">Choose Branch</button>
+	<div id="dropMenu" class="dropC">
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+		<a href="#">Link 1</a>
+	</div>
 </div>
 
 
