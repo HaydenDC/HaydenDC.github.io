@@ -80,6 +80,8 @@
     </style>
 
     <script>
+
+    	//For HDFIrrigation.html
     	function getTraining()
     	{
     		var xhttpTrain = new XMLHttpRequest();
@@ -96,9 +98,28 @@
 
     	}
 
+    	//For HDFTraining.html
     	function showMenu()
     	{
     		document.getElementById("dropMenu").classList.toggle("show");
+    	}
+
+    	//Close dropdown
+    	window.onclick = function(event)
+    	{
+    		if(!event.target.matches('.dropB'))
+    		{
+    			var drops = document.getElementsByClassName('dropC');
+
+    			for (var i = 0; i < drops.length, i++)
+    			{
+    				var openedD = drops[i];
+    				if (openedD.classList.contains('show'))
+    				{
+    					openedD.classList.remove('show');
+    				}
+    			}
+    		}
     	}
 
     </script>
