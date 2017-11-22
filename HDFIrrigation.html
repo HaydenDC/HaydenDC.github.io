@@ -45,6 +45,7 @@
 		cursor: pointer;
 	}
 
+
 	button:hover
 	{
 		animation-name: aLink;
@@ -52,6 +53,14 @@
 		animation-fill-mode: forwards;
 		animation-timing-function: linear;
 
+	}
+
+	a:hover
+	{
+		animation-name: aLink;
+		animation-duration: .25s;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
 	}
 
 	@keyframes aLink
@@ -139,7 +148,7 @@
 	<nav>
 		<ul>
 			<li><a href="https://haydendc.github.io/HDFIrrigation.html" style="background-color: black;
-				color: white; text-decoration: none;">
+				color: white; text-decoration: none; padding: 5px 10px;">
 			Home</a><li><br>
 			<li><button href="#">Branch Sales</button></li><br>
 			<li><button onclick="getTraining()">Branch Training</button></li><br>
