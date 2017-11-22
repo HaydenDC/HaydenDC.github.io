@@ -44,12 +44,27 @@
 
 	a:hover
 	{
-		background-color: blue;
+		animation-name: aLink;
+		animation-duration: 2s;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes aLink
+	{
+		from
+		{
+			background-color: black;
+		}
+
+		to
+		{
+			background-color: #00b300;
+		}
+
 	}
 
 	article
 	{
-		height:100%;
 		margin-left: 170px;
 		border-left: 1px solid #1ac6ff;
 		padding: 1em;
@@ -58,8 +73,12 @@
 
 
     </style>
-    <script>
 
+    <script>
+    	function linkHover()
+    	{
+
+    	}
     </script>
 </head>
 <body style="margin: auto; font-family: verdana">
