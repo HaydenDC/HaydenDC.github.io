@@ -77,8 +77,19 @@
     </style>
 
     <script>
-    	function linkHover()
+    	function getTraining()
     	{
+    		var xhttpTrain = new XMLHttpRequest();
+    		xhttpTrain.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("article").innerHTML = this.responseText;
+    			}
+    		};
+
+    		xhttpTrain.open("GET", "https://haydendc.github.io/HDFTraining.html");
+    		xhttpTrain.send();
 
     	}
     </script>
@@ -95,7 +106,7 @@
 <!--Button div-->
 	<nav>
 		<ul>
-			<li><a href="#">Branch Sales</a></li><br>
+			<li><a onclick="getTraining()">Branch Sales</a></li><br>
 			<li><a href="#">Branch Training</a></li><br>
 			<li><a href="#">Catalog</a></li><br>
 		</ul>
