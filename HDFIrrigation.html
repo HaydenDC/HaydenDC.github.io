@@ -12,7 +12,7 @@
 
 	header, footer
 	{
-		padding: 1em;
+		padding: .5em;
 		color: white;
 		background-color: gray;
 		clear: left;
@@ -98,6 +98,22 @@
 
     	}
 
+    	function goHome()
+    	{
+    		var xhttpTrain = new XMLHttpRequest();
+    		xhttpTrain.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				return;
+    			}
+    		};
+
+    		xhttpTrain.open("GET", "https://haydendc.github.io/HDFIrrigation.html");
+    		xhttpTrain.send();
+
+    	}
+
     	//For HDFTraining.html
     	function showMenu()
     	{
@@ -136,6 +152,7 @@
 <!--Button div-->
 	<nav>
 		<ul>
+			<li><button onclick="goHome()">Home</button><li><br>
 			<li><button href="#">Branch Sales</button></li><br>
 			<li><button onclick="getTraining()">Branch Training</button></li><br>
 			<li><button href="#">Catalog</button></li><br>
