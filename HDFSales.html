@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HDF-Training</title>
+	<style>
+	#div.container
+	{
+		width: 100%;
+		border: 1px solid red;
+
+	}
+
+	header, footer
+	{
+		padding: .5em;
+		color: white;
+		background-color: gray;
+		clear: left;
+		text-align: center;
+	}
+
+	.dropB
+	{
+		background-color: black;
+		color: white;
+		padding: 10px;
+		font-size: 18px;
+		border: none;
+		cursor: pointer;
+	}
+
+	.dropB:hover, .dropB:focus
+	{
+		background-color: #3e8e41;
+	}
+
+	.dropD
+	{
+		position:relative;
+		display: inline-block;
+	}
+	.dropC
+	{
+		display: none;
+		position: absolute;
+		
+		
+		z-index: 1;
+		color: black;
+		display:box;
+
+	}
+
+	.dropC button:hover
+	{
+		background-color: #3e8e41;
+		color: white;
+	}
+
+	.dropC button
+	{
+        background-color: black;
+		color: white;
+		width: 143px;
+		padding: 5px 10px;
+		text-decoration: none;
+		border: none;
+		font-size: 16px;
+		display:block;
+		cursor: pointer;
+	}
+
+	.show
+	{
+		display:block;
+	}
+
+	article
+	{
+		margin-left: 170px;
+		border-left: 1px solid #1ac6ff;
+		padding: 1em;
+		overflow: hidden;
+	}
+
+
+    </style>
+
+    <script>
+    	
+    </script>
+
+</head>
+<body style="margin: auto; font-family: verdana">
+
+<div class="container">
+<!--Title-->	
+	<header>
+		<h3 style="color: #003380;">			
+		Training Schedule</h3>
+	</header>
+
+</div>
+
+<div class="dropD">
+	<button onclick="showMenu()" class="dropB">Choose Branch</button>
+	<div id="dropMenu" class="dropC">
+		<button>Bellevue</button>
+		<button>Bellingham</button>
+		<button>Boise</button>
+		<button>Bozeman</button>
+		<button>Bremerton</button>
+		<button>Eugene</button>
+		<button>Hayden</button>
+		<button>Idaho Falls</button>
+		<button>Marysville</button>
+		<button>Medford</button>
+		<button>Olympia</button>
+		<button>Pacific</button>
+		<button>Pasco</button>
+		<button>Redmond</button>
+		<button>Spokane</button>
+		<button>Twin Falls</button>
+		<button>Vancouver</button>
+		<button>Wenatchee</button>
+		<button>Wilsonville</button>
+		<button>Yakima</button>
+	</div>
+</div>
+
+</body>
+</html>
