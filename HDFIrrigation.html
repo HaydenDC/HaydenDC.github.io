@@ -91,7 +91,8 @@
 
     <script>
 
-    	//For HDFIrrigation.html
+ ///////////For HDFIrrigation.html////////////
+ 		//Training
     	function getTraining()
     	{
     		var xhttpTrain = new XMLHttpRequest();
@@ -108,8 +109,42 @@
 
     	}
 
+    	//Sales
+    	function getSales()
+    	{
+    		var xhttpTrain = new XMLHttpRequest();
+    		xhttpTrain.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("main").innerHTML = this.responseText;
+    			}
+    		};
 
-    	//For HDFTraining.html
+    		xhttpTrain.open("GET", "https://haydendc.github.io/HDFSales.html");
+    		xhttpTrain.send();
+    	}
+
+    	//Catalog
+    	function getCatalog()
+    	{
+    		var xhttpTrain = new XMLHttpRequest();
+    		xhttpTrain.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("main").innerHTML = this.responseText;
+    			}
+    		};
+
+    		xhttpTrain.open("GET", "https://haydendc.github.io/HDFCatalog.html");
+    		xhttpTrain.send();
+    	}
+
+
+
+
+/////////////For HDFTraining.html//////////////////////////////////
     	function showMenu()
     	{
     		document.getElementById("dropMenu").classList.toggle("show");
@@ -134,6 +169,7 @@
     	}
 
     </script>
+    
 </head>
 <body style="margin: auto; font-family: verdana">
 
@@ -150,9 +186,9 @@
 			<li><a href="https://haydendc.github.io/HDFIrrigation.html" style="background-color: black;
 				color: white; text-decoration: none; padding: 5px 10px;">
 			Home</a><li><br>
-			<li><button href="#">Branch Sales</button></li><br>
+			<li><button onclick="getSales()">Branch Sales</button></li><br>
 			<li><button onclick="getTraining()">Branch Training</button></li><br>
-			<li><button href="#">Catalog</button></li><br>
+			<li><button onclick="getCatalog()">Catalog</button></li><br>
 		</ul>
 	</nav>
 
