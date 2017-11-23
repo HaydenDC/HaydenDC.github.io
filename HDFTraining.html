@@ -19,6 +19,13 @@
 		text-align: center;
 	}
 
+	.sticky
+	{
+		position:fixed;
+		top: 0;
+		width: 100%;
+	}
+
 	.dropB
 	{
 		background-color: black;
@@ -87,7 +94,21 @@
     </style>
 
     <script>
-    	
+    	var titleBar = document.getElementById("tBar");
+
+    	var sticky = titleBar.offsetTop;
+
+    	function stopTitle()
+    	{
+    		if(window.pageYOffset >= sticky)
+    		{
+    			titleBar.classList.add("sticky");
+    		}
+    		else
+    		{
+    			titleBar.classList.remove("sticky");
+    		}
+    	}
     </script>
 
 </head>
@@ -95,7 +116,7 @@
 
 <div class="container">
 <!--Title-->	
-	<header>
+	<header id="tBar">
 		<h3 style="color: #003380;">			
 		Training Schedule</h3>
 	</header>
@@ -128,7 +149,7 @@
 	</div>
 </div>
 
-<article style="border-left: 1px solid red; margin-left:340px">
+<article style="border-left: 1px solid red; margin-left:300px">
 	<p>The article</p>
 	
 </article>
