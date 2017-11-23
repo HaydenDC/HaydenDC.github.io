@@ -90,25 +90,16 @@
 		overflow: hidden;
 	}
 
+	table, th, td
+	{
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
 
     </style>
 
     <script>
-    	var titleBar = document.getElementById("tBar");
 
-    	var sticky = titleBar.offsetTop;
-
-    	function stopTitle()
-    	{
-    		if(window.pageYOffset >= sticky)
-    		{
-    			titleBar.classList.add("sticky");
-    		}
-    		else
-    		{
-    			titleBar.classList.remove("sticky");
-    		}
-    	}
     </script>
 
 </head>
@@ -150,7 +141,17 @@
 </div>
 
 <article style="border-left: 1px solid red; margin-left:300px">
-	<p>The article</p>
+	<table>
+		<tr>
+			<th colspan="2">Date</th>
+			<th>Special</th>
+		</tr>
+		<tr>
+			<td>11/27/2017</td>
+			<td>12/22/2017</td>
+			<td>Ice Melter: 50# <span style="color: green">25% off</span></td>
+		</tr>
+	</table>
 	
 </article>
 
