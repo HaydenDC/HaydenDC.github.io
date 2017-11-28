@@ -7,7 +7,7 @@
 
 
 <h2>Click the button</h2>
-<h3>This pulls only one value from the JSON array</h3>
+<h3>This pulls only the data associated with the 'body' key from this webservice</h3>
 
 	<!--Script to request data-->
 <script>
@@ -22,7 +22,7 @@
 				document.getElementById("theResult").innerHTML = result.body;
 			}
 			else
-				document.getElementById("theResult").innerHTML = "Did not get any data."
+				document.getElementById("theResult").innerHTML = "...Working..."
 		}
 		xmlHttp.open("GET",'https://jsonplaceholder.typicode.com/posts/2', true);
 		xmlHttp.send();
@@ -32,7 +32,7 @@
 <button onclick="sendRequest()" style="border: solid black 2px; background-color: maroon;">
 Click Me</button>
 <p id="theResult"><p><br>
-<a href="https://haydendc.github.io/weekFourJSON.json">The JSON file</a>
+<a href="https://jsonplaceholder.typicode.com/posts/2">The JSON file</a>
 
 
 </body>
