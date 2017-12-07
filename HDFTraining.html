@@ -99,7 +99,15 @@
 
     </style>
 
+<!--SCRIPTS-->
     <script>
+
+    	//Bellevue
+    	function choseBellvue(){
+    		document.getElementById("table_id").innerHTML = "Bellevue";
+
+    	}
+
 
     </script>
 
@@ -118,7 +126,7 @@
 <div class="dropD">
 	<button onclick="showMenu()" class="dropB">-Choose Branch-</button>
 	<div id="dropMenu" class="dropC">
-		<button>Bellevue</button>
+		<button onclick="choseBellvue()">Bellevue</button>
 		<button>Bellingham</button>
 		<button>Boise</button>
 		<button>Bozeman</button>
@@ -142,7 +150,7 @@
 </div>
 
 <article style="border-left: 1px solid red; margin-left:300px">
-	<p>Choose a Branch</p>
+	<p id="table_id">Choose a Branch</p>
 	<table style="width: 800px">
 		<tr>
 			<th colspan="2">Date</th>
