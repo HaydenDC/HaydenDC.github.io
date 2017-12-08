@@ -215,9 +215,9 @@
     		//Remove the TBD
     		var numRows = document.getElementById("table_training").rows.length;
 
-    		for(var i = 1; i < numRows -1; i++)
+    		for(var i = 0; i <= numRows -1; i++)
     		{
-    			document.getElementById("table_training").deleteRow(i);
+    			document.getElementById("table_training").deleteRow(i + 1);
     		}
 
 
@@ -231,9 +231,9 @@
     		//Remove the TBD
     		var numRows = document.getElementById("table_training").rows.length;
 
-    		for(var i = 1; i < numRows -1; i++)
+    		for(var i = 0; i <= numRows -1; i++)
     		{
-    			document.getElementById("table_training").deleteRow(i);
+    			document.getElementById("table_training").deleteRow(i + 1);
     		}
 
     		//Add to the table
