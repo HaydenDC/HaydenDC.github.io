@@ -214,6 +214,7 @@
     		//Add Elements to the table
     		//Remove the TBD
     		var numRows = document.getElementById("table_training").rows.length - 1;
+    		document.getElementById("table_id").innerHTML = numRows;
 
     		for(var i = 1; i <= numRows; i++)
     		{
@@ -230,7 +231,7 @@
     		//Add Elements to the table
     		//Remove the TBD
     		var numRows = document.getElementById("table_training").rows.length - 1;
-
+    		document.getElementById("table_id").innerHTML = numRows;
     		for(var i = 1; i <= numRows; i++)
     		{
     			document.getElementById("table_training").deleteRow(i);
