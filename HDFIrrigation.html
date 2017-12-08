@@ -213,11 +213,11 @@
 
     		//Add Elements to the table
     		//Remove the TBD
-    		var numRows = document.getElementById("table_training").rows.length;
+    		var numRows = document.getElementById("table_training").rows.length - 1;
 
-    		for(var i = 0; i < numRows -1; i++)
+    		for(var i = 1; i <= numRows; i++)
     		{
-    			document.getElementById("table_training").deleteRow(i + 1);
+    			document.getElementById("table_training").deleteRow(i);
     		}
 
 
@@ -229,11 +229,11 @@
 
     		//Add Elements to the table
     		//Remove the TBD
-    		var numRows = document.getElementById("table_training").rows.length;
+    		var numRows = document.getElementById("table_training").rows.length - 1;
 
-    		for(var i = 0; i < numRows -1; i++)
+    		for(var i = 1; i <= numRows; i++)
     		{
-    			document.getElementById("table_training").deleteRow(i + 1);
+    			document.getElementById("table_training").deleteRow(i);
     		}
 
     		//Add to the table
