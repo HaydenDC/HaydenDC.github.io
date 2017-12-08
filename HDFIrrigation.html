@@ -211,6 +211,16 @@
     	function choseHayden(){
     		document.getElementById("table_id").innerHTML = "Hayden";
 
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length;
+
+    		for(var i = 1; i<= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(i);
+    		}
+
+
     	}
 
     	//Idaho Falls
@@ -219,7 +229,12 @@
 
     		//Add Elements to the table
     		//Remove the TBD
-    		document.getElementById("table_training").deleteRow(1);
+    		var numRows = document.getElementById("table_training").rows.length;
+
+    		for(var i = 1; i<= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(i);
+    		}
 
     		//Add to the table
     		var iFTable = document.getElementById("table_training");
