@@ -170,7 +170,7 @@
     		}
     	}
 
-    		//Bellevue
+    	//Bellevue
     	function choseBellevue(){
     		document.getElementById("table_id").innerHTML = "Bellevue";
 
@@ -211,7 +211,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -219,11 +219,95 @@
     	function choseBoise(){
     		document.getElementById("table_id").innerHTML = "Boise";
 
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+    		
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		var td21    = rowOne.insertCell(1);
+    		var td31    = rowOne.insertCell(2);
+    		var td41    = rowOne.insertCell(3);
+
+    		 td11.innerHTML = "12-12-2017";
+    		 td21.innerHTML = "9:00-4:00";
+    		 td31.innerHTML = "Boise Branch";
+		     td41.innerHTML = "Basalite: Premeables, Walls, Pavers";
+
+    		//2
+    		var rowTwo  = iFTable.insertRow(2);
+    		var td12    = rowTwo.insertCell(0);
+    		var td22    = rowTwo.insertCell(1);
+    		var td32    = rowTwo.insertCell(2);
+    		var td42    = rowTwo.insertCell(3);
+
+    		 td12.innerHTML = "1-22-2018";
+    		 td22.innerHTML = "10:00-2:00";
+    		 td32.innerHTML = "Boise Branch";
+    		 td42.innerHTML = "Inman: Filtration, Kichler, Regulations, Troubleshooting";
+
+    		//3
+    		var rowThree  = iFTable.insertRow(3);
+    		var td13    = rowThree.insertCell(0);
+    		var td23    = rowThree.insertCell(1);
+    		var td33    = rowThree.insertCell(2);
+    		var td43    = rowThree.insertCell(3);
+
+    		 td13.innerHTML = "2-1-2018";
+    		 td23.innerHTML = "10:00-2:00";
+    		 td33.innerHTML = "Boise Branch";
+    		 td43.innerHTML = "Rain Bird: Wi-fi Controller, RVANS & HE-VANS, Drip, Control line";
+
+    		//4
+    		var rowFour  = iFTable.insertRow(4);
+    		var td14    = rowFour.insertCell(0);
+    		var td24    = rowFour.insertCell(1);
+    		var td34    = rowFour.insertCell(2);
+    		var td44    = rowFour.insertCell(3);
+
+    		 td14.innerHTML = "2-22-2018";
+    		 td24.innerHTML = "11:00-1:00";
+    		 td34.innerHTML = "Boise Branch";
+    		 td44.innerHTML = "Hunter: Overview";
+
     	}
 
     	//Bozeman
     	function choseBozeman(){
     		document.getElementById("table_id").innerHTML = "Bozeman";
+
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+    		
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		var td21    = rowOne.insertCell(1);
+    		var td31    = rowOne.insertCell(2);
+    		var td41    = rowOne.insertCell(3);
+
+    		 td11.innerHTML = "1-24-2017";
+    		 td21.innerHTML = "12:00-4:00";
+    		 td31.innerHTML = "Bozeman Branch";
+		     td41.innerHTML = "Inman: Filtration, Kichler, Regulations, Troubleshooting";
+
+    		
 
     	}
 
@@ -245,7 +329,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -267,7 +351,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -289,7 +373,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
 
     	}
@@ -377,7 +461,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -399,7 +483,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -421,7 +505,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -443,7 +527,7 @@
     		//1
     		var rowOne  = iFTable.insertRow(1);
     		var td11    = rowOne.insertCell(0);
-    		td11.innerHTML = "Nothing yet scheduled.";
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -451,11 +535,43 @@
     	function chosePasco(){
     		document.getElementById("table_id").innerHTML = "Pasco";
 
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		td11.innerHTML = "Nothing yet scheduled";
+
     	}
 
     	//Redmond
     	function choseRedmond(){
     		document.getElementById("table_id").innerHTML = "Redmond";
+
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -463,11 +579,86 @@
     	function choseSpokane(){
     		document.getElementById("table_id").innerHTML = "Spokane";
 
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		td11.innerHTML = "Nothing yet scheduled";
+
     	}
 
     	//Twin Falls
     	function choseTwinFalls(){
     		document.getElementById("table_id").innerHTML = "Twin Falls";
+
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+    		
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		var td21    = rowOne.insertCell(1);
+    		var td31    = rowOne.insertCell(2);
+    		var td41    = rowOne.insertCell(3);
+
+    		 td11.innerHTML = "12-13-2017";
+    		 td21.innerHTML = "9:00-4:00";
+    		 td31.innerHTML = "Twin Falls Branch";
+		     td41.innerHTML = "Basalite: Premeables, Walls, Pavers";
+
+    		//2
+    		var rowTwo  = iFTable.insertRow(2);
+    		var td12    = rowTwo.insertCell(0);
+    		var td22    = rowTwo.insertCell(1);
+    		var td32    = rowTwo.insertCell(2);
+    		var td42    = rowTwo.insertCell(3);
+
+    		 td12.innerHTML = "1-23-2018";
+    		 td22.innerHTML = "10:00-2:00";
+    		 td32.innerHTML = "Twin Falls Branch";
+    		 td42.innerHTML = "Inman: Filtration, Kichler, Regulations, Troubleshooting";
+
+    		//3
+    		var rowThree  = iFTable.insertRow(3);
+    		var td13    = rowThree.insertCell(0);
+    		var td23    = rowThree.insertCell(1);
+    		var td33    = rowThree.insertCell(2);
+    		var td43    = rowThree.insertCell(3);
+
+    		 td13.innerHTML = "1-31-2018";
+    		 td23.innerHTML = "10:00-2:00";
+    		 td33.innerHTML = "Twin Falls Branch";
+    		 td43.innerHTML = "Rain Bird: Wi-fi Controller, RVANS & HE-VANS, Drip, Control line";
+
+    		//4
+    		var rowFour  = iFTable.insertRow(4);
+    		var td14    = rowFour.insertCell(0);
+    		var td24    = rowFour.insertCell(1);
+    		var td34    = rowFour.insertCell(2);
+    		var td44    = rowFour.insertCell(3);
+
+    		 td14.innerHTML = "2-21-2018";
+    		 td24.innerHTML = "11:00-1:00";
+    		 td34.innerHTML = "Twin Falls Branch";
+    		 td44.innerHTML = "Hunter: Overview";
 
     	}
 
@@ -475,11 +666,43 @@
     	function choseVancouver(){
     		document.getElementById("table_id").innerHTML = "Vancouver";
 
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		td11.innerHTML = "Nothing yet scheduled";
+
     	}
 
     	//Wenatchee
     	function choseWenatchee(){
     		document.getElementById("table_id").innerHTML = "Wenatchee";
+
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
@@ -487,11 +710,43 @@
     	function choseWilsonville(){
     		document.getElementById("table_id").innerHTML = "Wilsonville";
 
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		td11.innerHTML = "Nothing yet scheduled";
+
     	}
 
     	//Yakima
     	function choseYakima(){
     		document.getElementById("table_id").innerHTML = "Yakima";
+
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_training").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_training").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_training");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		td11.innerHTML = "Nothing yet scheduled";
 
     	}
 
