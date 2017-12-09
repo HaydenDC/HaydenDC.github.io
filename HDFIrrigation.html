@@ -63,7 +63,13 @@
 		animation-timing-function: linear;
 	}
 
-	
+	a:mouseout
+	{
+		animation-name: offLink;
+		animation-duration: .15s;
+		animation-fill-mode: forwards;
+		animation-timing-function: linear;
+	}
 
 	@keyframes aLink
 	{
@@ -79,6 +85,23 @@
 			margin-left:10px;
 		}
 
+	}
+
+	@keyframes offLink
+	{
+		from
+		{
+			background-color: #00b300;
+			margin-left:10px;
+
+		}
+
+		to {
+
+			background-color:black;
+			margin-left:0px;
+
+		}
 	}
 
 	article
