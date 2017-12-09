@@ -778,6 +778,69 @@
     	}
 
     	/////////////For HDFSchedule.html//////////////////////////////////
+    	//Idaho Falls
+    	function schedIdahoFalls(){
+    		document.getElementById("table_id").innerHTML = "Yakima";
+
+    		//Add Elements to the table
+    		//Remove the TBD
+    		var numRows = document.getElementById("table_schedule").rows.length - 1;
+
+    		for(var i = 1; i <= numRows; i++)
+    		{
+    			document.getElementById("table_schedule").deleteRow(1);
+    		}
+
+    		//Add to the table
+    		var iFTable = document.getElementById("table_schedule");
+    		//1
+    		var rowOne  = iFTable.insertRow(1);
+    		var td11    = rowOne.insertCell(0);
+    		var td12    = rowOne.insertCell(1);
+    		var td13    = rowOne.insertCell(2);
+    		td11.innerHTML = "South";
+    		td12.innerHTML = "Blackfoot, Pocatello, Lava, Preston, Franklin";
+    		td13.innerHTML = "Tuesday, Thursday";
+
+    		//2
+    		var rowTwo  = iFTable.insertRow(2);
+    		var td21    = rowTwo.insertCell(0);
+    		var td22    = rowTwo.insertCell(1);
+    		var td23    = rowTwo.insertCell(2);
+    		td21.innerHTML = "North";
+    		td22.innerHTML = "Rigby, Menan, Rexburg, St. Anthony";
+    		td23.innerHTML = "Monday";
+
+    		//3
+    		var rowThree  = iFTable.insertRow(3);
+    		var td31      = rowTwo.insertCell(0);
+    		var td32      = rowTwo.insertCell(1);
+    		var td33      = rowTwo.insertCell(2);
+    		td31.innerHTML = "West";
+    		td32.innerHTML = "Arco, Moore";
+    		td33.innerHTML = "Wednesday";
+
+    		//4
+    		var rowFour   = iFTable.insertRow(4);
+    		var td41      = rowTwo.insertCell(0);
+    		var td42      = rowTwo.insertCell(1);
+    		var td43      = rowTwo.insertCell(2);
+    		td41.innerHTML = "East";
+    		td42.innerHTML = "Swan Valley, Jackson, Hoback, Pinedale, Alpine";
+    		td43.innerHTML = "Friday";
+
+    		//5
+    		var rowFive   = iFTable.insertRow(5);
+    		var td51      = rowTwo.insertCell(0);
+    		var td52      = rowTwo.insertCell(1);
+    		var td53      = rowTwo.insertCell(2);
+    		td51.innerHTML = "Jackson";
+    		td52.innerHTML = "Swan Valley, Victor, Driggs, Wilsonville, Teton Village, Jackson, Hoback, Alpine ";
+    		td53.innerHTML = "Wednesday";
+
+
+
+    	}
 
 
     </script>
