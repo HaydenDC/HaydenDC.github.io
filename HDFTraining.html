@@ -134,10 +134,17 @@
     </style>
 
 <!--SCRIPTS-->
-    <script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap">
+	function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.2),
+        zoom: 10
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+} 
+</script>
 
-
-    </script>
 
 </head>
 <body style="margin: auto; font-family: verdana">
@@ -226,6 +233,10 @@
 	</table>
 	
 </article>
+
+<div id="map" style="height: 200px; width: 200px">
+
+</div>
 
 </body>
 </html>
