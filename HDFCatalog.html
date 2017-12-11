@@ -94,10 +94,34 @@
 
 	tr:hover
 	{
-		border: 1px solid #3e8e41;
-		background-color: #3e8e41;
+
+		animation-name: highlight;
+		animation-duration: .2s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
 		text-align: center;
-		color:white;
+
+		
+	}
+
+	@keyframes highlight
+	{
+		from
+		{
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: left;
+			padding: 5px;
+		}
+
+		to
+		{
+			border: 1px solid #3e8e41;
+			background-color: #3e8e41;
+			text-align: center;
+			padding: 6px;
+			color:white;
+		}
 	}
 
 
