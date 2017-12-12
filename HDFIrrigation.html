@@ -2317,24 +2317,24 @@ function countVisits()
 		if(typeof(Storage) !== "undefined")
 		{
 			//Make local storage object
-			if(localStorage.clickCnt)
+			if(localStorage.visitCnt)
 			{
 				//Converts storage from a string to a number
-				localStorage.clickCnt = Number(localStorage.clickCnt)+1;
+				localStorage.visitCnt = Number(localStorage.clickCnt)+1;
 			}
 
 			//If clickCnt doesn't exist
 			else
 			{
-				localStorage.clickCnt = 1;
+				localStorage.visitCnt = 1;
 			}
-			document.getElementById("numVisits").innerHTML = "Number of Visits: " + localStorage.clickCnt;
+			document.getElementById("numVisits").innerHTML = "Number of Visits: " + localStorage.visitCnt;
 		}
 
 		//If there is no storage..
 		else
 		{
-			document.getElementById("counter").innerHTML = "";
+			document.getElementById("numVisits").innerHTML = "";
 		}
 	}
 
