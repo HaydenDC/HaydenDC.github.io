@@ -72,15 +72,22 @@
 		animation-duration: .15s;
 		animation-fill-mode: both;
 		animation-timing-function: linear;
+
 	}
 
-	a:mouseout
+	p
 	{
-		animation-name: offLink;
-		animation-duration: .15s;
-		animation-fill-mode: forwards;
-		animation-timing-function: linear;
+		letter-spacing: 0px;
+		-webkit-transition: letter-spacing 2s;
+		transition: letter-spacing 2s;
 	}
+
+	p:hover
+	{
+		letter-spacing: 3px;
+	}
+
+	
 
 	@keyframes aLink
 	{
@@ -98,22 +105,6 @@
 
 	}
 
-	@keyframes offLink
-	{
-		from
-		{
-			background-color: #00b300;
-			margin-left:10px;
-
-		}
-
-		to {
-
-			background-color:black;
-			margin-left:0px;
-
-		}
-	}
 
 	article
 	{
@@ -2320,7 +2311,7 @@ function countVisits()
 			if(localStorage.visitCnt)
 			{
 				//Converts storage from a string to a number
-				localStorage.visitCnt = Number(localStorage.clickCnt)+1;
+				localStorage.visitCnt = Number(localStorage.visitCnt)+1;
 			}
 
 			//If clickCnt doesn't exist
