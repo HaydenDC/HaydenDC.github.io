@@ -83,6 +83,45 @@
 		overflow: hidden;
 	}
 
+	table, th, td
+	{
+		border: 1px solid black;
+		border-collapse: collapse;
+		padding: 5px;
+	}
+
+
+	tr:hover
+	{
+
+		animation-name: highlight;
+		animation-duration: .2s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		
+		
+	}
+
+	@keyframes highlight
+	{
+		from
+		{
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: left;
+			padding: 5px;
+		}
+
+		to
+		{
+			border: 1px solid #1ab2ff;
+			background-color: #1ab2ff;
+			text-align: center;
+			padding: 6px;
+			color:white;
+		}
+	}
+
 
     </style>
 
