@@ -2308,10 +2308,40 @@
     	}
 
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+function countVisits()
+	{
+		//Check to see if browser supports local storage
+		if(typeof(Storage) !== "undefined")
+		{
+			//Make local storage object
+			if(localStorage.clickCnt)
+			{
+				//Converts storage from a string to a number
+				localStorage.clickCnt = Number(localStorage.clickCnt)+1;
+			}
+
+			//If clickCnt doesn't exist
+			else
+			{
+				localStorage.clickCnt = 1;
+			}
+			document.getElementById("numVisits").innerHTML = "Number of Visits: " + localStorage.clickCnt;
+		}
+
+		//If there is no storage..
+		else
+		{
+			document.getElementById("counter").innerHTML = "";
+		}
+	}
+
     </script>
     
 </head>
-<body style="margin: auto; font-family: verdana">
+<body style="margin: auto; font-family: verdana" onload="countVisits()">
 
 <div class="container">
 <!--Title-->	
@@ -2330,6 +2360,8 @@
 			<li><button onclick="getSales()">Branch Sales</button></li><br>
 			<li><button onclick="getTraining()">Branch Training</button></li><br>
 			<li><button onclick="getCatalog()">Delivery Schedule</button></li><br>
+			<br>
+			<li id="numVisits"></li>
 		</ul>
 	</nav>
 
