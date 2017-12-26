@@ -8,8 +8,8 @@ div.container
 	margin: auto;
 	width: 80%;
 	padding: 1px;
-	border-right: 5px solid blue;
-	border-left: 5px solid blue;
+	border-right: 7px solid blue;
+	border-left: 7px solid blue;
 	background-color: lightblue;
 }
 
@@ -19,8 +19,8 @@ div.title_bar
 	width: auto;
 	padding: 2px;
 	font-size: 26px;
-	border-right: 2px solid red;
-	border-left: 2px solid red;
+	border-right: 3px solid red;
+	border-left: 3px solid red;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
 	text-align: center;
@@ -31,6 +31,13 @@ div.clear_bar
 	margin: auto;
 	width: auto;
 
+}
+
+#content_div
+{
+	margin: auto;
+	width: auto;
+	border-top: 3px solid yellow;
 }
 
 button.menu_bar
@@ -50,14 +57,24 @@ button.menu_bar
 		<title>SSB-League</title>
 	</head>
 	<body style="background-color: black; font-family: verdana">
+		<!--All the content: Container-->
 		<div class="container">
+
+			<!--The Title: Title_Bar-->
 			<div class="title_bar">
 				<p>Bassarlson SSB League</p>
 			</div>
-			<div class="clear_bar" style="text-align: center; padding-right: 4px">
+
+			<!--Menu Buttons: Clear_Bar-->
+			<div class="clear_bar" style="text-align: center;">
 				<button class="menu_bar">Enter Stats</button>
 				<button class="menu_bar">Check Table</button>
 				<button class="menu_bar">New Member</button>
+			</div>
+
+			<!--Content Page: Content_Div -->
+			<div id="content_div">
+				<p>HERE IS SOME LETTERS AND SOME WORDS</p>
 			</div>
 		</div>
 
