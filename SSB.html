@@ -58,6 +58,8 @@ button.menu_bar
 
 <script>
 	//AJAX
+
+	//Enter Stats
 	function getStats()
     	{
     		var xhttpStats = new XMLHttpRequest();
@@ -71,6 +73,40 @@ button.menu_bar
 
     		xhttpStats.open("GET", "https://haydendc.github.io/Stats.html");
     		xhttpStats.send();
+
+    	}
+
+    	//Get Table
+    	function getTable()
+    	{
+    		var xhttpTable = new XMLHttpRequest();
+    		xhttpStats.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("content_div").innerHTML = this.responseText;
+    			}
+    		}
+
+    		xhttpTable.open("GET", "https://haydendc.github.io/Table.html");
+    		xhttpTable.send();
+
+    	}
+
+    	//New Member
+    	function requestNewMember()
+    	{
+    		var xhttpNewMem = new XMLHttpRequest();
+    		xhttpStats.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("content_div").innerHTML = this.responseText;
+    			}
+    		}
+
+    		xhttpNewMem.open("GET", "https://haydendc.github.io/NewMember.html");
+    		xhttpNewMem.send();
 
     	}
 </script>
