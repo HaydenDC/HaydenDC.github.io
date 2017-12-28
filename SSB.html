@@ -80,7 +80,7 @@ button.menu_bar
     	function getTable()
     	{
     		var xhttpTable = new XMLHttpRequest();
-    		xhttpStats.onreadystatechange = function()
+    		xhttpTable.onreadystatechange = function()
     		{
     			if (this.readyState == 4 && this.status==200)
     			{
@@ -97,7 +97,7 @@ button.menu_bar
     	function requestNewMember()
     	{
     		var xhttpNewMem = new XMLHttpRequest();
-    		xhttpStats.onreadystatechange = function()
+    		xhttpNewMem.onreadystatechange = function()
     		{
     			if (this.readyState == 4 && this.status==200)
     			{
