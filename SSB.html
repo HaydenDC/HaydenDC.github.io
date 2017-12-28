@@ -56,6 +56,25 @@ button.menu_bar
 
 </style>
 
+<script>
+	//AJAX
+	function getStats()
+    	{
+    		var xhttpStats = new XMLHttpRequest();
+    		xhttpStats.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("content_div").innerHTML = this.responseText;
+    			}
+    		}
+
+    		xhttpTrain.open("GET", "https://haydendc.github.io/Stats.html");
+    		xhttpTrain.send();
+
+    	}
+</script>
+
 <!--Head-->
 	<head>
 		<title>SSB-League</title>
@@ -71,7 +90,7 @@ button.menu_bar
 
 			<!--Menu Buttons: Clear_Bar-->
 			<div class="clear_bar" style="text-align: center;">
-				<button class="menu_bar">Enter Stats</button>
+				<button class="menu_bar" onclick="getStats()">Enter Stats</button>
 				<button class="menu_bar">Check Table</button>
 				<button class="menu_bar">New Member</button>
 			</div>
