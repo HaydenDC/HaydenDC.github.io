@@ -3,28 +3,35 @@
 <head>
 </head>
 <body>
-	<form>
+	<form autocomplete="on">
 		<!--Character-->
-		<input type="text">
-		<br>
-		<!--Damage Given-->
-		<input type="text">
-		<br>
-		<!--Kills-->
-		<input type="text">
-		<br>
-		<!--Position-->
-		<input type="radio" name="position" value="1">First
-		<br>
-		<input type="radio" name="position" value="2">Second
-		<br>
-		<input type="radio" name="position" value="3">Third
-		<br>
-		<input type="radio" name="position" value="0">Did Not Place
-		<br>
+		<fieldset>
+			<legend>Enter Battle Statistics</legend>
+			Character:<br>
+			<input type="text" name="Character" placeholder="ex. Link" required>
+				<br>
+			<!--Damage Given-->
+			Damage Given:<br>
+			<input type="number" name="Damage" max="2500" min="0" placeholder="ex. 530" required>
+				<br>
+			<!--Kills-->
+			Kills:<br>
+			<input type="text" name="Kills" placeholder="ex. 3" required>
+				<br>
+			<!--Position-->
+			Position:<br>
+			<input type="radio" name="position" value="1">First
+				<br>
+			<input type="radio" name="position" value="2">Second
+				<br>
+			<input type="radio" name="position" value="3">Third
+				<br>
+			<input type="radio" name="position" value="0">Did Not Place
+				<br>
 
-		<!--Submit-->
-		<input type="submit">
+			<!--Submit-->
+			<input type="submit">
+	    </fieldset>
 
 	</form>
 </body>
