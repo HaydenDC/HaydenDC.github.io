@@ -11,6 +11,7 @@ div.container
 	padding: 1px;
 	border-right: 7px solid blue;
 	border-left: 7px solid blue;
+	border-bottom: 15px solid blue;
 	background-color: lightblue;
 }
 
@@ -94,6 +95,23 @@ button:hover
 <script>
 	//AJAX
 
+	//Home
+	function goHome()
+    	{
+    		var xhttpHome = new XMLHttpRequest();
+    		xhttpHome.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("content_div").innerHTML = this.responseText;
+    			}
+    		}
+
+    		xhttpHome.open("GET", "https://haydendc.github.io/home.html");
+    		xhttpHome.send();
+
+    	}
+
 	//Enter Stats
 	function getStats()
     	{
@@ -150,7 +168,7 @@ button:hover
 	<head>
 		<title>SSB-League</title>
 	</head>
-	<body style="background-color: black; font-family: verdana">
+	<body onload="goHome()" style="background-color: black; font-family: verdana">
 		<!--All the content: Container-->
 		<div class="container">
 
