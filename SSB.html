@@ -54,6 +54,38 @@ button.menu_bar
 	border-radius: 3px;
 }
 
+button.menu_bar:hover
+{
+	animation-name: menu_button_click;
+	animation-timing-function: 4s;
+}
+
+@keyframes menu_button_click
+{
+	0%
+	{
+		background-color: lightgreen;
+		border-color: green;
+		border-radius: 3px;
+	}
+
+	50%
+	{
+		background-color: gray;
+		border-color: blue;
+		border-top-right-radius: 2px;
+		border-bottom-left-radius: 2px; 
+	}
+
+	100%
+	{
+		background-color: white;
+		border-color: red;
+		border-top-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+}
+
 </style>
 
 <script>
