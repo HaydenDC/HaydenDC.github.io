@@ -22,7 +22,7 @@ div.title_bar
 	width: auto;
 	height: 100px;
 	padding: 2px;
-	font-size: 36px;
+	font-size: 46px;
 	border-right: 3px solid red;
 	border-left: 3px solid red;
 	border-bottom-right-radius: 5px;
@@ -54,14 +54,14 @@ button.menu_bar
 	font-family: Gadget;
 	font-size: 30px;
 	background-color: #00ccff;
-	border: 2px solid green;
-	border-radius: 10px;
+	color: white;
+	font-weight: bold;
 }
 
 button:hover
 {
 	animation-name: menu_button_click;
-	animation-duration: 1s;
+	animation-duration: .5s;
 	animation-timing-function: linear;
 	
 }
@@ -70,25 +70,22 @@ button:hover
 {
 	0%
 	{
-		background-color: lightgreen;
-		border-color: green;
-		border-radius: 3px;
+		background-color: #00ccff;
+		border-color: black;
+		
 	}
 
 	50%
 	{
 		background-color: gray;
-		border-color: blue;
-		border-top-right-radius: 5px;
-		border-bottom-left-radius: 5px; 
+		border-color: #00ccff;
 	}
 
 	100%
 	{
 		background-color: white;
-		border-color: red;
-		border-top-right-radius: 0px;
-		border-bottom-left-radius: 0px;
+		border-color: #00ccff;
+
 	}
 }
 
@@ -194,7 +191,7 @@ button:hover
 			<!--The Title: Title_Bar-->
 			<div class="title_bar">
 				<p>Bassarlson SSB League</p>
-				<p id="logged_in"></p>
+				<p id="logged_in" style="font-size: 42px;"></p>
 			</div>
 
 			<!--Menu Buttons: Clear_Bar-->
