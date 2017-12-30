@@ -62,21 +62,21 @@ input
 <script>
 
 	//User credentials
-	var keepLogin = Boolean(localStorage.userDataKnown);
+	/*var keepLogin = Boolean(localStorage.userDataKnown);
 	var firstName = localStorage.ssbFirstName;
 	var lastName  = localStorage.ssbLastName;
 	var userName  = localStorage.ssbUserName;
 	var password  = localStorage.ssbPassword;
 	var passWordN1;
 	var passWordN2;
-
+*/
 
 	function saveLogin()
 	{
 		//Check to see if browser supports local storage
 		if(typeof(Storage) !== "undefined")
 		{
-			firstName = newUserForm.elements["firstN"].value;
+			localStorage.ssbFirstName = newUserForm.elements["firstN"].value;
 			//document.getElementById("logged_in").innerHTML = firstName;
 		}
 
