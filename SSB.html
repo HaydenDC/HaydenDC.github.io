@@ -54,6 +54,7 @@ button.menu_bar
 	font-family: Gadget;
 	font-size: 30px;
 	background-color: #00ccff;
+	border-color: #00ccff;
 	color: white;
 	font-weight: bold;
 }
@@ -61,8 +62,9 @@ button.menu_bar
 button:hover
 {
 	animation-name: menu_button_click;
-	animation-duration: .5s;
+	animation-duration: .25s;
 	animation-timing-function: linear;
+	animation-fill-mode: both;
 	
 }
 
@@ -193,6 +195,7 @@ button:hover
 				<p>Bassarlson SSB League</p>
 				<p id="logged_in" style="font-size: 42px;"></p>
 			</div>
+			<br>
 
 			<!--Menu Buttons: Clear_Bar-->
 			<div class="clear_bar" style="text-align: center;">
