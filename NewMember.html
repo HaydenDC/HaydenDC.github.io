@@ -107,7 +107,7 @@ input
 		</fieldset>
 	</form>
 
-	<form action="saveLogin()" method="POST" id="newUserForm">
+	<form id="newUserForm">
 		<fieldset>
 			<legend style="color: #00cc66">New User</legend>
 
@@ -126,7 +126,9 @@ input
 			Do it again:<br>
 			<input type="text" size="12" placeholder= "ex. myPassword" name="newPassOne" required><br>
 			<br>
-			<input type="submit" class="custom_submit">
+
+			<!--Submit-->
+			<button class="custom_submit" onclick="saveLogin()">SUBMIT</button>
 		</fieldset>
 	</form>
 </body>
