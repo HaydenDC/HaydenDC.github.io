@@ -59,20 +59,46 @@ input
 }
 
 </style>
-<head>
-</head>
+<script>
+
+	//User credentials
+	var keepLogin = Boolean(localStorage.userDataKnown);
+	var firstName = localStorage.ssbFirstName;
+	var lastName  = localStorage.ssbLastName;
+	var userName  = localStorage.ssbUserName;
+	var password  = localStorage.ssbPassword;
+	var passWordN1;
+	var passWordN2;
+
+
+	function saveLogin()
+	{
+		//Check to see if browser supports local storage
+		if(typeof(Storage) !== "undefined")
+		{
+			firstName = newUserForm.elements["firstN"].value;
+			document.getElementById("logged_in").innerHTML = firstName;
+		}
+
+		//If there is no storage..
+		else
+		{
+			document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
+		}
+	}
+</script>
 <body>
-	<form>
+	<form action="doLogin()" method="POST" id="loginForm">
 		<fieldset>
 			<legend style="color: #00cc66">Log In</legend>
 			<!--UserName-->
 			Username:<br>
-			<input type="text" size="25" required>
+			<input type="text" size="25" name="username" required>
 			<br>
 
 			<!--Password-->
 			Password:<br>
-			<input type="password" size="10" required>
+			<input type="password" size="10" name="password" required>
 			<br><br>
 
 			<!--Submit-->
@@ -81,24 +107,24 @@ input
 		</fieldset>
 	</form>
 
-	<form>
+	<form action="saveLogin()" method="POST" id="newUserForm">
 		<fieldset>
 			<legend style="color: #00cc66">New User</legend>
 
 			<!--Names-->
 			Enter Your First and Last name:<br>
-			<input type="text" size="12" placeholder="First Name" required><br><br>
-			<input type="text" size="15" placeholder="Last Name" required><br>
+			<input type="text" size="12" placeholder="First Name" name="firstN" required><br><br>
+			<input type="text" size="15" placeholder="Last Name" name="lastN"required><br>
 
 			<!--Username-->
 			Create a username<br> <span style="font-size: 35px;">(Max 12 characters)</span>:<br>
-			<input type="text" size="12" placeholder="ex. IAmTheBest" required><br>
+			<input type="text" size="12" placeholder="ex. IAmTheBest" name="userN" required><br>
 
 			<!--Password-->
 			Create a password<br> <span style="font-size: 35px;">(Max 12 characters)</span>:<br>
-			<input type="text" size="12" placeholder= "ex. myPassword" required><br>
+			<input type="text" size="12" placeholder= "ex. myPassword" name="newPassOne" required><br>
 			Do it again:<br>
-			<input type="text" size="12" placeholder= "ex. myPassword" required><br>
+			<input type="text" size="12" placeholder= "ex. myPassword" name="newPassOne" required><br>
 			<br>
 			<input type="submit" class="custom_submit">
 		</fieldset>
