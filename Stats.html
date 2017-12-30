@@ -24,10 +24,40 @@ form.battle_stats
 	width:300px;
 	height: 100px;
 	background-color: #00ccff;
+	border: none;
 	color: white;
 	font-weight: bold;
 	font-size: 40px;
 
+	animation-name: submit_click;
+	animation-duration: .25s;
+	animation-timing-function: linear;
+	animation-fill-mode: both;
+
+}
+
+@keyframes submit_click
+{
+	0%
+	{
+		background-color: #00ccff;
+		border-color: none;
+		
+	}
+
+	50%
+	{
+		background-color: gray;
+		border-color: #00ccff;
+	}
+
+	100%
+	{
+		background-color: white;
+		border-color: #00ccff;
+		color:#00ccff;
+
+	}
 }
 
 </style>
