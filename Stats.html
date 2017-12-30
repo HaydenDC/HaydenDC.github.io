@@ -10,6 +10,14 @@ form.battle_stats
 
 }
 
+.custom_radio
+{
+	width: 25px;
+	height: 25px;
+	border-radius: 45%;
+
+}
+
 </style>
 <head>
 </head>
@@ -19,7 +27,7 @@ form.battle_stats
 		<fieldset>
 			<legend>Enter Battle Statistics</legend>
 			Character:<br>
-			<input type="text" name="Character" placeholder="ex. Link" required
+			<input type="text" name="Character" placeholder="ex. Link" size="20" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 			<!--Damage Given-->
@@ -29,18 +37,18 @@ form.battle_stats
 				<br>
 			<!--Kills-->
 			Kills:<br>
-			<input type="text" name="Kills" placeholder="ex. 3" max="21" min="0" required
+			<input type="number" name="Kills" placeholder="ex. 3" max="21" min="0" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 			<!--Position-->
 			Position:<br>
-			<input type="radio" name="position" value="1">First
+			<input type="radio" class="custom_radio" name="position" value="1">First
 				<br><br>
-			<input type="radio" name="position" value="2">Second
+			<input type="radio" class="custom_radio" name="position" value="2">Second
 				<br><br>
-			<input type="radio" name="position" value="3">Third
+			<input type="radio" class="custom_radio" name="position" value="3">Third
 				<br><br>
-			<input type="radio" name="position" value="0">Did Not Place
+			<input type="radio" class="custom_radio" name="position" value="0">Did Not Place
 				<br><br>
 
 			<!--Submit-->
