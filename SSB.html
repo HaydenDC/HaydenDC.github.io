@@ -164,6 +164,23 @@ button:hover
     		xhttpNewMem.send();
 
     	}
+
+    	//Rules
+    	function getRules()
+    	{
+    		var xhttpRules = new XMLHttpRequest();
+    		xhttpRules.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("content_div").innerHTML = this.responseText;
+    			}
+    		}
+
+    		xhttpRules.open("GET", "https://haydendc.github.io/info.html");
+    		xhttpRules.send();
+
+    	}
 </script>
 
 <!--Head-->
@@ -184,6 +201,7 @@ button:hover
 				<button class="menu_bar" onclick="getStats()">Enter Stats</button>
 				<button class="menu_bar" onclick="getTable()">Check Table</button>
 				<button class="menu_bar" onclick="requestNewMember()">New Member</button>
+				<button class="menu_bar" onclick="getRules()">Rules</button>
 			</div>
 			<br>
 
