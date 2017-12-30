@@ -26,6 +26,7 @@ form.battle_stats
 	background-color: #00ccff;
 	color: white;
 	font-weight: bold;
+	font-size: 40px;
 
 }
 
@@ -37,22 +38,22 @@ form.battle_stats
 		<!--Character-->
 		<fieldset>
 			<legend>Enter Battle Statistics</legend>
-			<span style="text-decoration: underline;"> Character:<br>
+			<span style="text-decoration: underline;"> Character:</span><br>
 			<input type="text" name="Character" placeholder="ex. Link" size="20" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 			<!--Damage Given-->
-			Damage Given:<br>
+			<span style="text-decoration: underline;">Damage Given:</span><br>
 			<input type="number" name="Damage" max="2500" min="0" placeholder="ex. 530" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 			<!--Kills-->
-			Kills:<br>
+			<span style="text-decoration: underline;">Kills:</span><br>
 			<input type="number" name="Kills" placeholder="ex. 3" max="21" min="0" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 			<!--Position-->
-			Position:</span><br>
+			<span style="text-decoration: underline;">Position:</span><br>
 			<input type="radio" class="custom_radio" name="position" value="1"><span style="font-size: 40px;">First
 				<br>
 			<input type="radio" class="custom_radio" name="position" value="2">Second
