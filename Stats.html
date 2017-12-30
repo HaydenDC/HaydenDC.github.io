@@ -5,39 +5,43 @@
 form.battle_stats
 {
 	margin: auto;
-	font-size: 30;
+	font-size: 50px;
+
 
 }
 
 </style>
 <head>
 </head>
-<body>
+<body style="text-align: center;">
 	<form class="battle_stats" autocomplete="on">
 		<!--Character-->
 		<fieldset>
 			<legend>Enter Battle Statistics</legend>
 			Character:<br>
-			<input type="text" name="Character" placeholder="ex. Link" required>
+			<input type="text" name="Character" placeholder="ex. Link" required
+			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 			<!--Damage Given-->
 			Damage Given:<br>
-			<input type="number" name="Damage" max="2500" min="0" placeholder="ex. 530" required>
+			<input type="number" name="Damage" max="2500" min="0" placeholder="ex. 530" required
+			style="width: 250px; height: 55px; font-size: 45px;>
 				<br>
 			<!--Kills-->
 			Kills:<br>
-			<input type="text" name="Kills" placeholder="ex. 3" required>
+			<input type="text" name="Kills" placeholder="ex. 3" max="21" min="0" required
+			style="width: 250px; height: 55px; font-size: 45px;>
 				<br>
 			<!--Position-->
 			Position:<br>
 			<input type="radio" name="position" value="1">First
-				<br>
+				<br><br>
 			<input type="radio" name="position" value="2">Second
-				<br>
+				<br><br>
 			<input type="radio" name="position" value="3">Third
-				<br>
+				<br><br>
 			<input type="radio" name="position" value="0">Did Not Place
-				<br>
+				<br><br>
 
 			<!--Submit-->
 			<input type="submit">
