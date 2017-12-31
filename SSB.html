@@ -52,8 +52,9 @@ div.title_bar
     position: absolute;
     top: 4px;
     right: 25px;
-    font-size: 42px;
+    font-size: 60px;
     margin-left: 50px;
+    color: white;
 }
 
 div.clear_bar
@@ -75,7 +76,7 @@ div.clear_bar
 
 button.menu_bar
 {
-	width: 275px;
+	width: 305px;
 	height: 155px;
 	font-family: Gadget;
 	font-size: 30px;
@@ -139,6 +140,8 @@ button:hover
     		xhttpHome.open("GET", "https://haydendc.github.io/home.html");
     		xhttpHome.send();
 
+    		closeNav();
+
     	}
 
 	//Enter Stats
@@ -155,6 +158,8 @@ button:hover
 
     		xhttpStats.open("GET", "https://haydendc.github.io/Stats.html");
     		xhttpStats.send();
+
+    		closeNav();
 
     	}
 
@@ -173,6 +178,8 @@ button:hover
     		xhttpTable.open("GET", "https://haydendc.github.io/Table.html");
     		xhttpTable.send();
 
+    		closeNav();
+
     	}
 
     	//New Member
@@ -189,6 +196,8 @@ button:hover
 
     		xhttpNewMem.open("GET", "https://haydendc.github.io/NewMember.html");
     		xhttpNewMem.send();
+
+    		closeNav();
 
     	}
 
@@ -249,13 +258,16 @@ function saveLogin()
     	//Get the local storage
     	//document.getElementById("theName").innerHTML = "Test";//localStorage.ssbFirstName;
 
-    	function openNav() {
-    document.getElementById("mySidenav").style.width = "350px";
-}
+    	function openNav() 	
+    	{
+    		document.getElementById("mySidenav").style.width = "350px";
+		}
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+		function closeNav() 
+		{
+    		document.getElementById("mySidenav").style.width = "0";
+		}
+
 </script>
 
 
@@ -275,10 +287,12 @@ function closeNav() {
 			<div id="mySidenav" class="sidenav" style="text-align: center;">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
+				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Login</button>
+				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Profile</button>
 				<button class="menu_bar" onclick="getStats()">Enter Stats</button>
 				<button class="menu_bar" onclick="getTable()">Check Table</button>
 				<button class="menu_bar" onclick="getRules()">Rules</button>
-				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Login</button>
+				
 				
 			</div>
 			<br>
