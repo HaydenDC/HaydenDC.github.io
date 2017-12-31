@@ -71,42 +71,7 @@ input
 	var passWordN2;
 */
 
-	function saveLogin()
-	{
-		//Passwords match?
-		var passWordN1 = newUserForm.elements["newPassOne"].value;
-		var passWordN2 = newUserForm.elements["newPassTwo"].value;
-		var passMatch  = passWordN1.localeCompare(passWordN2);
-
-
-		//Make save login
-		if(passMatch == 0)
-		{
-			//Check to see if browser supports local storage
-			if(typeof(Storage) !== "undefined")
-			{
-
-				localStorage.ssbFirstName = newUserForm.elements["firstN"].value;
-				localStorage.ssbLastName  = newUserForm.elements["lastN"].value;
-				localStorage.ssbUserName  = newUserForm.elements["userN"].value;
-				localStorage.ssbPassword  = newUserForm.elements["newPassOne"].value;
-
-				//Save login boolean
-				Boolean(localStorage.userDataKnown) = true;
-			}
-
-			//If there is no storage..
-			else
-			{
-				document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
-			}
-		}
-		else
-		{
-			Boolean(localStorage.userDataKnown) = false;
-
-		}
-	}
+	
 </script>
 <body>
 	<form action="doLogin()" method="POST" id="loginForm">
