@@ -44,7 +44,7 @@ div.title_bar
     left: 0;
     background-color: #787878;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.4s;
     padding-top: 60px;
 }
 
@@ -52,7 +52,7 @@ div.title_bar
     position: absolute;
     top: 4px;
     right: 25px;
-    font-size: 60px;
+    font-size: 100px;
     margin-left: 50px;
     color: white;
 }
@@ -279,8 +279,9 @@ function saveLogin()
 
 			<!--The Title: Title_Bar-->
 			<div class="title_bar">
-				<p>Bassarlson SSB League
-				<span style="font-size:30px; cursor:pointer" onclick="openNav()">&#9776; open</span></p>
+				<p><span style="font-size:40px; cursor:pointer" onclick="openNav()">&#9776; open</span>
+					Bassarlson SSB League
+				</p>
 				<p id="theName" style="font-size: 42px;"></p>
 			</div>
 			<br>
@@ -289,10 +290,11 @@ function saveLogin()
 			<div id="mySidenav" class="sidenav" style="text-align: center;">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br><br>
 
-				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Login</button><br>
-				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Profile</button><br>
-				<button class="menu_bar" onclick="getStats()">Enter Stats</button><br>
-				<button class="menu_bar" onclick="getTable()">Check Table</button><br>
+				<button id="log_in" class="menu_bar" onclick="goHome()">Home</button><br><br>
+				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Login</button><br><br>
+				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Profile</button><br><br>
+				<button class="menu_bar" onclick="getStats()">Enter Stats</button><br><br>
+				<button class="menu_bar" onclick="getTable()">Check Table</button><br><br>
 				<button class="menu_bar" onclick="getRules()">Rules</button>
 				
 				
