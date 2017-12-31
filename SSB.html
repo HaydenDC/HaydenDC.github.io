@@ -216,6 +216,8 @@ button:hover
     		xhttpRules.open("GET", "https://haydendc.github.io/info.html");
     		xhttpRules.send();
 
+    		closeNav();
+
     	}
 
 function saveLogin()
@@ -285,7 +287,7 @@ function saveLogin()
 
 			<!--Menu Buttons: Clear_Bar-->
 			<div id="mySidenav" class="sidenav" style="text-align: center;">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br>
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><br><br>
 
 				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Login</button><br>
 				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Profile</button><br>
