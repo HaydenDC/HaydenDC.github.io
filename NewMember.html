@@ -73,17 +73,38 @@ input
 
 	function saveLogin()
 	{
-		//Check to see if browser supports local storage
-		if(typeof(Storage) !== "undefined")
-		{
-			localStorage.ssbFirstName = newUserForm.elements["firstN"].value;
-			//document.getElementById("logged_in").innerHTML = firstName;
-		}
+		//Passwords match?
+		var passWordN1 = newUserForm.elements["newPassOne"].value;
+		var passWordN2 = newUserForm.elements["newPassTwo"].value;
+		var passMatch  = passWordN1.localeCompare(passWordN2);
 
-		//If there is no storage..
+
+		//Make save login
+		if(passMatch == 0)
+		{
+			//Check to see if browser supports local storage
+			if(typeof(Storage) !== "undefined")
+			{
+
+				localStorage.ssbFirstName = newUserForm.elements["firstN"].value;
+				localStorage.ssbLastName  = newUserForm.elements["lastN"].value;
+				localStorage.ssbUserName  = newUserForm.elements["userN"].value;
+				localStorage.ssbPassword  = newUserForm.elements["newPassOne"].value;
+
+				//Save login boolean
+				Boolean(localStorage.userDataKnown) = true;
+			}
+
+			//If there is no storage..
+			else
+			{
+				document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
+			}
+		}
 		else
 		{
-			document.getElementById("counter").innerHTML = "This browser does not support web storage. Sorry";
+			Boolean(localStorage.userDataKnown) = false;
+
 		}
 	}
 </script>
@@ -107,6 +128,8 @@ input
 		</fieldset>
 	</form>
 
+	<!--NEW USER-->
+
 	<form id="newUserForm">
 		<fieldset>
 			<legend style="color: #00cc66">New User</legend>
@@ -124,7 +147,7 @@ input
 			Create a password<br> <span style="font-size: 35px;">(Max 12 characters)</span>:<br>
 			<input type="text" size="12" placeholder= "ex. myPassword" name="newPassOne" required><br>
 			Do it again:<br>
-			<input type="text" size="12" placeholder= "ex. myPassword" name="newPassOne" required><br>
+			<input type="text" size="12" placeholder= "ex. myPassword" name="newPassTwo" required><br>
 			<br>
 
 			<!--Submit-->
