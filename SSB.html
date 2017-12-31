@@ -35,6 +35,27 @@ div.title_bar
 	text-align: center;
 }
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 div.clear_bar
 {
 	margin: auto;
@@ -209,7 +230,7 @@ function saveLogin()
 				localStorage.ssbPassword  = newUserForm.elements["newPassOne"].value;
 
 				//Save login boolean
-				Boolean(localStorage.userDataKnown) = true;
+				localStorage.userDataKnown = "true";
 			}
 
 			//If there is no storage..
@@ -220,13 +241,21 @@ function saveLogin()
 		}
 		else
 		{
-			Boolean(localStorage.userDataKnown) = false;
+			localStorage.userDataKnown = "false";
 
 		}
 	}
     	//NOT WORKING RIGHT NOW -12/30/2017
     	//Get the local storage
-    	document.getElementById("theName").innerHTML = "Test";//localStorage.ssbFirstName;
+    	//document.getElementById("theName").innerHTML = "Test";//localStorage.ssbFirstName;
+
+    	function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
 </script>
 
 
@@ -237,12 +266,15 @@ function saveLogin()
 			<!--The Title: Title_Bar-->
 			<div class="title_bar">
 				<p>Bassarlson SSB League</p>
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 				<p id="theName" style="font-size: 42px;"></p>
 			</div>
 			<br>
 
 			<!--Menu Buttons: Clear_Bar-->
-			<div class="clear_bar" style="text-align: center;">
+			<div id="mySidenav" class="sidenav" style="text-align: center;">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
 				<button class="menu_bar" onclick="getStats()">Enter Stats</button>
 				<button class="menu_bar" onclick="getTable()">Check Table</button>
 				<button class="menu_bar" onclick="getRules()">Rules</button>
