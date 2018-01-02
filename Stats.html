@@ -63,10 +63,109 @@ form.battle_stats
 }
 
 </style>
+<script>
+
+	//Variables
+	var bCharacter;
+	var bDamageGiv;
+	var bDamageTak;
+	var bKills;
+	var bFalls;
+	var bPosition;
+	var totalPersonal;
+	var totalLeague;
+
+	function calcBattle()
+	{
+		getVariables();
+		applyMultiplierPersonal();
+		applyMultiplierLeague();
+		//Display in current page
+		//I would then store this in the database
+		display();
+	}
+
+	function getVariables();
+	{
+		bCharacter = battle_form.elements["Character"].value;
+		bDamageGiv = battle_form.elements["DamageG"].value;
+		bDamageTak = battle_form.elements["DamageT"].value;
+		bKills     = battle_form.elements["Kills"].value;
+		bFalls     = battle_form.elements["Falls"].value;
+		bPosition  = battle_form.elements["position"].value;
+	}
+
+	function applyMultiplierPersonal()
+	{
+		//Damage Given
+		bDamageGiv = bDamageGiv * .01;
+
+		//Damage Taken
+		bDamageTak = bDamageTak * -.01;
+
+		//Kills multiplier is 1
+
+		//Falls
+		bFalls = bFalls * -.15;
+
+		//Position
+		if(bPosition == 0)
+			bPosition = 2;
+		else if(bPosition == 3)
+			bPosition = 3;
+		else if(bPosition == 2)
+			bPosition = 4;
+		else if(bPosition == 1)
+			bPosition = 5;
+
+		//Subtotal
+		var subTotal = bDamageGiv + bDamageTak + bKills + bFalls + bPosition;
+
+		//Grace and Total
+		if(subTotal < 0)
+			subTotal + 5;
+		else
+			totalPersonal = subTotal;
+
+	}
+
+
+	function applyMultiplierLeague()
+	{
+		//Damage Given
+		bDamageGiv = bDamageGiv * .01;
+
+		//Kills multiplier is 1
+
+		//Falls
+		bFalls = bFalls * -.19;
+
+		//Subtotal (Average)
+		var subTotal = (bDamageGiv + bKills + bFalls)/3.0;
+
+		//Grace and Total
+		if(subTotal < 0)
+			totalLeague = 1;
+		else
+			totalLeague = subTotal;
+
+	}
+
+	function display()
+	{
+		document.getElementById("Char").innerHTML = bCharacter;
+		document.getElementById("DG").innerHTML = bDamageGiv;
+		document.getElementById("DT").innerHTML = bDamageTak;
+		document.getElementById("Kill").innerHTML = bKills;
+		document.getElementById("Fall").innerHTML = bFalls;
+		document.getElementById("pos").innerHTML = bPosition;
+	}
+
+</script>
 <head>
 </head>
 <body style="text-align: center;">
-	<form class="battle_stats" autocomplete="on">
+	<form id="battle_form"class="battle_stats" autocomplete="on">
 		<!--Character-->
 		<fieldset>
 			<legend style="color: #00cc66">Enter Battle Statistics</legend>
@@ -77,13 +176,13 @@ form.battle_stats
 				<br>
 			<!--Damage Given-->
 			<span style="text-decoration: underline;">Damage Given:</span><br>
-			<input type="number" name="Damage" max="2500" min="0" placeholder="ex. 530" required
+			<input type="number" name="DamageG" max="2500" min="0" placeholder="ex. 530" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 
 			<!--Damage Given-->
 			<span style="text-decoration: underline;">Damage Taken:</span><br>
-			<input type="number" name="Damage" max="2500" min="0" placeholder="ex. 530" required
+			<input type="number" name="DamageT" max="2500" min="0" placeholder="ex. 530" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 			
@@ -95,7 +194,7 @@ form.battle_stats
 
 			<!--Kills-->
 			<span style="text-decoration: underline;">Falls:</span><br>
-			<input type="number" name="Kills" placeholder="ex. 3" max="21" min="0" required
+			<input type="number" name="Falls" placeholder="ex. 3" max="21" min="0" required
 			style="width: 250px; height: 55px; font-size: 45px;">
 				<br>
 
@@ -111,9 +210,17 @@ form.battle_stats
 				<br><br>
 
 			<!--Submit-->
-			<input type="submit" class="custom_submit" value="SUBMIT">
+			<button class="custom_submit" onclick="calcBattle()">SUBMIT</button>
 	    </fieldset>
 
 	</form>
+
+	<p id="Char">Character</p>
+	<p id="DG">Damage Given</p>
+	<p id="DT">Damage Taken</p>
+	<p id="Kill">Kills</p>
+	<p id="Fall">Falls</p>
+	<p id="pos">Position</p>
+
 </body>
 </html>
