@@ -79,10 +79,11 @@ form.battle_stats
 	{
 		getVariables();
 		applyMultiplierPersonal();
+		displayPersonal();
 		applyMultiplierLeague();
 		//Display in current page
 		//I would then store this in the database
-		display();
+//		display();
 	}
 
 	function getVariables();
@@ -151,7 +152,7 @@ form.battle_stats
 
 	}
 
-	function display()
+	function displayPersonal()
 	{
 		document.getElementById("Char").innerHTML = bCharacter;
 		document.getElementById("DG").innerHTML = bDamageGiv;
