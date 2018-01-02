@@ -112,22 +112,27 @@ form.battle_stats
 		//Position
 		//Array of available
 		var positionArr = new Array();
-		positionArr["1"] = 5;
-		positionArr["2"] = 4;
-		positionArr["3"] = 3;
-		positionArr["0"] = 2;
+		positionArr["First"] = 5;
+		positionArr["Second"] = 4;
+		positionArr["Third"] = 3;
+		positionArr["DNP"] = 2;
 
 		//Find the checked value
 		var theForm = document.forms["battle_form"];
 		var myPosition = theForm.elements["position"];
+		var theChosenOne = 0;
 
 		for(var i = 0; myPosition.length; i++)
 		{
 			if(myPosition[i].checked)
-				bPosition = positionArr[myPosition[i].value];
+			{
+				theChosenOne = positionArr[myPosition[i].value];
+			
 			break;
+			}
 		}
 
+		bPosition = theChosenOne;
 		/*
 		if(bPosition == 0)
 			bPosition = 2;
@@ -220,13 +225,13 @@ form.battle_stats
 
 			<!--Position-->
 			<span style="text-decoration: underline;">Position:</span><br>
-			<input type="radio" class="custom_radio" name="position" value="1"><span style="font-size: 42px;">First
+			<input type="radio" class="custom_radio" name="position" value="First"><span style="font-size: 42px;">First
 				<br>
-			<input type="radio" class="custom_radio" name="position" value="2">Second
+			<input type="radio" class="custom_radio" name="position" value="Second">Second
 				<br>
-			<input type="radio" class="custom_radio" name="position" value="3">Third
+			<input type="radio" class="custom_radio" name="position" value="Third">Third
 				<br>
-			<input type="radio" class="custom_radio" name="position" value="0">Did Not Place</span>
+			<input type="radio" class="custom_radio" name="position" value="DNP">Did Not Place</span>
 				<br><br>
 
 			<!--Submit-->
