@@ -110,6 +110,25 @@ form.battle_stats
 		bFalls = bFalls * -.15;
 
 		//Position
+		//Array of available
+		var positionArr = New Array();
+		positionArr["1"] = 5;
+		positionArr["2"] = 4;
+		positionArr["3"] = 3;
+		positionArr["0"] = 2;
+
+		//Find the checked value
+		var theForm = document.forms["battle_form"];
+		var myPosition = theForm.elements["position"];
+
+		for(var i = 0; myPosition.length; i++)
+		{
+			if(myPosition[i].checked)
+				bPosition = positionArr[myPosition[i].value];
+			break;
+		}
+
+		/*
 		if(bPosition == 0)
 			bPosition = 2;
 		else if(bPosition == 3)
@@ -118,7 +137,7 @@ form.battle_stats
 			bPosition = 4;
 		else if(bPosition == 1)
 			bPosition = 5;
-
+*/
 		//Subtotal
 		var subTotal = bDamageGiv + bDamageTak + bKills + bFalls + bPosition;
 
