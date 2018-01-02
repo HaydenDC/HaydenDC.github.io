@@ -80,7 +80,7 @@ form.battle_stats
 		getVariables();
 		applyMultiplierPersonal();
 		displayPersonal();
-		applyMultiplierLeague();
+		//applyMultiplierLeague();
 		//Display in current page
 		//I would then store this in the database
 //		display();
@@ -147,7 +147,7 @@ form.battle_stats
 		var subTotal = bDamageGiv + bDamageTak + bKills + bFalls + bPosition;
 
 		//Grace and Total
-		if(subTotal < 0)
+		if(subTotal <= 0)
 			totalPersonal = subTotal + 5;
 		else
 			totalPersonal = subTotal;
