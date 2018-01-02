@@ -72,6 +72,7 @@ form.battle_stats
 	var bKills;
 	var bFalls;
 	var bPosition;
+	var subTotal = 0;
 	var totalPersonal = 0;
 	var totalLeague = 0;
 
@@ -144,14 +145,14 @@ form.battle_stats
 			bPosition = 5;
 */
 		//Subtotal
-		var subTotal = bDamageGiv + bDamageTak + bKills + bFalls + bPosition;
-
+		subTotal = bDamageGiv + bDamageTak + bKills + bFalls + bPosition;
+/*
 		//Grace and Total
 		if(subTotal <= 0)
 			totalPersonal = subTotal + 5;
 		else
 			totalPersonal = subTotal;
-
+*/
 	}
 
 
@@ -184,7 +185,7 @@ form.battle_stats
 		document.getElementById("Kill").innerHTML = bKills;
 		document.getElementById("Fall").innerHTML = bFalls;
 		document.getElementById("pos").innerHTML = bPosition;
-		document.getElementById("total").innerHTML = totalPersonal;
+		document.getElementById("total").innerHTML = subTotal;
 	}
 
 </script>
