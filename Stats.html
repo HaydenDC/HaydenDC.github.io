@@ -148,7 +148,7 @@ form.battle_stats
 
 		//Grace and Total
 		if(subTotal < 0)
-			subTotal + 5;
+			totalPersonal = subTotal + 5;
 		else
 			totalPersonal = subTotal;
 
@@ -184,6 +184,7 @@ form.battle_stats
 		document.getElementById("Kill").innerHTML = bKills;
 		document.getElementById("Fall").innerHTML = bFalls;
 		document.getElementById("pos").innerHTML = bPosition;
+		document.getElementById("total").innerHTML = totalPersonal;
 	}
 
 </script>
@@ -246,6 +247,7 @@ form.battle_stats
 	<p id="Kill">Kills</p>
 	<p id="Fall">Falls</p>
 	<p id="pos">Position</p>
+	<p id="total">Total</p>
 
 </body>
 </html>
