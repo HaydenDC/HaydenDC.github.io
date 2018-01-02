@@ -219,6 +219,25 @@ button:hover
 
     	}
 
+    	//Rules
+    	function getProfile()
+    	{
+    		var xhttpProfile = new XMLHttpRequest();
+    		xhttpProfile.onreadystatechange = function()
+    		{
+    			if (this.readyState == 4 && this.status==200)
+    			{
+    				document.getElementById("content_div").innerHTML = this.responseText;
+    			}
+    		}
+
+    		xhttpProfile.open("GET", "https://haydendc.github.io/profile.html");
+    		xhttpProfile.send();
+
+    		closeNav();
+
+    	}
+
 function saveLogin()
 	{
 		//Passwords match?
@@ -293,7 +312,7 @@ function saveLogin()
 
 				<button id="log_in" class="menu_bar" onclick="goHome()">Home</button><br><br>
 				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Login</button><br><br>
-				<button id="log_in" class="menu_bar" onclick="requestNewMember()">Profile</button><br><br>
+				<button id="log_in" class="menu_bar" onclick="getProfile()">Profile</button><br><br>
 				<button class="menu_bar" onclick="getStats()">Enter Stats</button><br><br>
 				<button class="menu_bar" onclick="getTable()">Check Table</button><br><br>
 				<button class="menu_bar" onclick="getRules()">Rules</button>
