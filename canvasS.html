@@ -32,6 +32,7 @@
 </canvas>
 <canvas id="comp10" width="100" height="100" style="border:1px solid green;">
 </canvas>
+<br>
 
 
 <script>
@@ -113,16 +114,16 @@ c5.fill();
 
 //Competitor 1
 var co1 = document.getElementById("comp");
-var c1 = co1.getContext("2d");
-c1.beginPath();
-c1.moveTo(40, 20);
-c1.lineTo(60, 20);
-c1.lineTo(60, 80);
-c1.lineTo(40, 80);
-c1.closePath();
-c1.stroke();
-c1.fillStyle = "green";
-c1.fill();
+var cc1 = co1.getContext("2d");
+cc1.beginPath();
+cc1.moveTo(40, 20);
+cc1.lineTo(60, 20);
+cc1.lineTo(60, 80);
+cc1.lineTo(40, 80);
+cc1.closePath();
+cc1.stroke();
+cc1.fillStyle = "green";
+cc1.fill();
 
 </script>
 </body>
