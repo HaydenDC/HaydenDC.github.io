@@ -5,6 +5,13 @@
 </canvas>
 <canvas id="player2" width="100" height="100" style="border:1px solid red;">
 </canvas>
+<canvas id="player3" width="100" height="100" style="border:1px solid red;">
+</canvas>
+<canvas id="player4" width="100" height="100" style="border:1px solid red;">
+</canvas>
+<canvas id="player5" width="100" height="100" style="border:1px solid red;">
+</canvas>
+
 
 <script>
 
@@ -25,8 +32,8 @@ c1.fill();
 var p2 = document.getElementById("player2");
 var c2 = p2.getContext("2d");
 c2.beginPath();
-c2.moveTo(25, 35);
-c2.lineTo(35, 25);
+c2.moveTo(25, 40);
+c2.lineTo(40, 25);
 c2.lineTo(75, 25);
 c2.lineTo(75, 75);
 c2.lineTo(25, 75);
@@ -34,6 +41,54 @@ c2.closePath();
 c2.stroke();
 c2.fillStyle = "red";
 c2.fill();
+
+//Player 3
+var p3 = document.getElementById("player3");
+var c3 = p.getContext("2d");
+c3.beginPath();
+c3.moveTo(25, 40);
+c3.lineTo(40, 25);
+c3.lineTo(60, 25);
+c3.lineTo(75, 40);
+c3.lineTo(75, 75);
+c3.lineTo(25, 75);
+c3.closePath();
+c3.stroke();
+c3.fillStyle = "red";
+c3.fill();
+
+//Player 4
+var p4 = document.getElementById("player4");
+var c4 = p.getContext("2d");
+c4.beginPath();
+c4.moveTo(25, 40);
+c4.lineTo(40, 25);
+c4.lineTo(60, 25);
+c4.lineTo(75, 40);
+c4.lineTo(75, 60);
+c4.lineTo(60, 75);
+c4.lineTo(25, 75);
+c4.closePath();
+c4.stroke();
+c4.fillStyle = "red";
+c4.fill();
+
+//Player 5
+var p5 = document.getElementById("player5");
+var c5 = p.getContext("2d");
+c5.beginPath();
+c5.moveTo(25, 40);
+c5.lineTo(40, 25);
+c5.lineTo(60, 25);
+c5.lineTo(75, 40);
+c5.lineTo(75, 60);
+c5.lineTo(60, 75);
+c5.lineTo(40, 75);
+c5.lineTo(25, 60);
+c5.closePath();
+c5.stroke();
+c5.fillStyle = "red";
+c5.fill();
 
 </script>
 </body>
