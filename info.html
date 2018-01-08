@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Log in</title>
 </head>
+
 <body>
-	<h1>Here is the Rules page</h1>
+	<div style="text-align: center;">
+		<br/><br/>
+		<p>Please log in:</p>
+
+		<form action="https://protected-everglades-75144.herokuapp.com/authenticateAgent.php" method="post">
+			<input type="text" name="username" placeholder="username" autofocus><br/><br/>
+      <input type="password" name="password" placeholder="password"><br/><br/>
+			<input type="submit" value="Login">
+		</form>
+
+		<br/><br/>
+
+		<p>Or create an account</p> <br/>
+		<form action="https://protected-everglades-75144.herokuapp.com/createAgent.php" method="post">
+			<input type="text" name="firstName" placeholder="First Name"><br/><br/>
+			<input type="text" name="lastName" placeholder="Last Name"><br/><br/>
+			<input type="text" name="usernameC" placeholder="Username"><br/><br/>
+      <input type="password" name="passwordC" placeholder="Password"><br/><br/>
+			<input type="password" name="passwordC2" placeholder="Reenter Password"><br/><br/>
+			<input type="submit" value="Create Bank Agent">
+		</form>
+
+	</div>
 </body>
+<!--THE LINK-->
+<!--
+https://protected-everglades-75144.herokuapp.com/agentLogIn.html
+-->
+
 </html>
