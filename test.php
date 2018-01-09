@@ -1,10 +1,14 @@
+<?php
+
+require_once("ssbDBconnect.php");
+?>
+
 <!DOCTYPE html>
 <html>
 <body>
 
-<?php
+<?
 
-require_once("ssbDBconnect.php");
 
 echo "<table>";
 echo "<tr>";
