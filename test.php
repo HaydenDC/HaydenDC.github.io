@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <body>
@@ -15,7 +13,7 @@ echo "<th>last_name</th>";
 echo "<th>username</th>";
 echo "<th>password</th>";
 echo "</tr>";
-
+/*
 
 	  $statement = $db->prepare("SELECT id, first_name, last_name, username, password FROM player");
       $statement->execute();
@@ -38,6 +36,7 @@ echo "</tr>";
         echo "</tr>";
 
     }
+    */
     echo "</table>";
         
 
