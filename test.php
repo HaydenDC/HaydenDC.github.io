@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <?php
 
 require_once("ssbDBconnect.php")
@@ -36,3 +40,5 @@ echo "</tr>";
         
 
 ?>
+</body>
+</html>
