@@ -1,7 +1,4 @@
-<?php
 
-require_once("ssbDBconnect.php");
-?>
 
 <!DOCTYPE html>
 <html>
