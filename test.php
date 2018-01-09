@@ -4,7 +4,7 @@
 
 <?php
 
-require_once("ssbDBconnect.php")
+require_once("ssbDBconnect.php");
 
 echo "<table>";
 echo "<tr>";
