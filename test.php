@@ -4,7 +4,7 @@
 <html>
 <body>
 
-<?
+<?php
 
 
 echo "<table>";
